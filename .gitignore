@@ -1,0 +1,16 @@
+Unity/Library/
+Unity/Library
+Unity/obj/
+Unity/obj
+Unity/Temp/
+Unity/Temp
+Unity/Logs
+Unity/Logs/
+Unity/UserSettings
+Unity/UserSettings/
+Unity/.vs
+Unity/.vs/
+
+Unity/.vsconfig
+Unity/Assembly-CSharp.csproj
+Unity/Unity.sln
