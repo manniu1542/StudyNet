@@ -1,4 +1,4 @@
-using Newtonsoft.Json.Converters;
+ï»¿using Newtonsoft.Json.Converters;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,13 +14,13 @@ using UnityEngine;
 
 public class BaseData
 {
-    ////Ã¶¾Ù×ª byte
+    ////æšä¸¾è½¬ byte
     //private byte[] StructToByte<H>(H t) where H : struct
     //{
 
 
     //}
-    //¼Ì³ĞµÄÀà×ªbyte  Àà¶ÔÏó µÄÖµÔõÃ´ »ñÈ¡ 
+    //ç»§æ‰¿çš„ç±»è½¬byte  ç±»å¯¹è±¡ çš„å€¼æ€ä¹ˆ è·å– 
     public int GetLen(Type t)
     {
 
@@ -54,7 +54,7 @@ public class BaseData
             }
             else
             {
-                Debug.LogError("Â©µôĞòÁĞ»¯µÄÊôĞÔ£º" + fi[i].Name);
+                Debug.LogError("æ¼æ‰åºåˆ—åŒ–çš„å±æ€§ï¼š" + fi[i].Name);
             }
 
 
@@ -70,7 +70,7 @@ public class BaseData
     }
     public byte[] ToByte<T>() where T : BaseData
     {
-        //»ñÈ¡ËùÓĞ×Ó¼¶
+        //è·å–æ‰€æœ‰å­çº§
 
 
         Type t = typeof(T);
@@ -129,7 +129,7 @@ public class BaseData
 
     public object ToDataByByte(Type type, byte[] arrByte)
     {
-        //¼ì²é×Ö½ÚÊÇ·ñ ÊÇËùĞèÒªµÄ¡£
+        //æ£€æŸ¥å­—èŠ‚æ˜¯å¦ æ˜¯æ‰€éœ€è¦çš„ã€‚
 
 
 
@@ -191,24 +191,24 @@ public class BaseData
 
 
 [Serializable]
-public class Test : BaseData
+public class TestStep30 : BaseData
 {
-    public Test ggg;
+    public TestStep30 ggg;
     public int a;
     public string b;
     public bool c;
     public long d;
 }
-//´«ÊäÊı¾İ¸ñÊ½ 
+//ä¼ è¾“æ•°æ®æ ¼å¼ 
 public class LessonStep30 : MonoBehaviour
 {
     // Start is called before the first frame update
-    Test test;
+    TestStep30 test;
     void Start()
     {
-        test = new Test();
+        test = new TestStep30();
         test.a = 1;
-        test.b = "ÊÇ°¢Èø1as";
+        test.b = "æ˜¯é˜¿è¨1as";
         test.c = false;
         test.d = 555;
         //Lesson30_1();
@@ -217,12 +217,12 @@ public class LessonStep30 : MonoBehaviour
     }
     public void Lesson30_1()
     {
-        Debug.Log("¿Î³Ì30:ĞòÁĞ»¯ µÄ½â´ğ£¡");
+        Debug.Log("è¯¾ç¨‹30:åºåˆ—åŒ– çš„è§£ç­”ï¼");
 
 
 
         byte[] arrbyte;
-        //ĞòÁĞ»¯ 
+        //åºåˆ—åŒ– 
         MemoryStream stream = new MemoryStream();
 
         BinaryFormatter bc = new BinaryFormatter();
@@ -231,12 +231,12 @@ public class LessonStep30 : MonoBehaviour
 
         stream.Close();
 
-        //·´ĞòÁĞ»¯ 
+        //ååºåˆ—åŒ– 
         MemoryStream stream2 = new MemoryStream(arrbyte);
 
         BinaryFormatter bc2 = new BinaryFormatter();
 
-        var test2 = bc2.Deserialize(stream2) as Test;
+        var test2 = bc2.Deserialize(stream2) as TestStep30;
 
 
         stream2.Close();
@@ -250,10 +250,10 @@ public class LessonStep30 : MonoBehaviour
 
     public void Lesson30_2()
     {
-        var arr = test.ToByte<Test>();
+        var arr = test.ToByte<TestStep30>();
 
-        Test tt = new Test();
-        var gg = tt.ToDataByByte(typeof(Test), arr) as Test;
+        TestStep30 tt = new TestStep30();
+        var gg = tt.ToDataByByte(typeof(TestStep30), arr) as TestStep30;
 
         Debug.Log(gg.a);
         Debug.Log(gg.b);

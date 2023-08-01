@@ -13,31 +13,31 @@ public class LessonStep22 : MonoBehaviour
     }
     public void Lesson22()
     {
-        Debug.Log("¿Î³Ì22:µØÖ· ¶Ë¿ÚºÅ µÄ½â´ğ£¡");
-        //µØÖ·
+        Debug.Log("è¯¾ç¨‹22:åœ°å€ ç«¯å£å· çš„è§£ç­”ï¼");
+        //åœ°å€
         IPAddress ip = IPAddress.Parse("127.0.0.1");
         print(ip.ToString());
-        //µØÖ·+¶Ë¿ÚºÅ
+        //åœ°å€+ç«¯å£å·
         IPEndPoint ipep = new IPEndPoint(ip, 80);
         print(ipep.ToString());
     }
     public async void Lesson24()
     {
-        Debug.Log("¿Î³Ì24£ºdns ÓòÃû×ª»»µØÖ·  µÄ½â´ğ£¡");
+        Debug.Log("è¯¾ç¨‹24ï¼šdns åŸŸåè½¬æ¢åœ°å€  çš„è§£ç­”ï¼");
         Debug.Log(Dns.GetHostName());
        
         var value = await Dns.GetHostEntryAsync("www.baidu.com");
-        //»ñÈ¡ dnsÓ³ÉäµÄ µØÖ· ÁĞ±í 
+        //è·å– dnsæ˜ å°„çš„ åœ°å€ åˆ—è¡¨ 
         for (int i = 0; i < value.AddressList.Length; i++)
         {
             Debug.Log(value.AddressList[i]);
         }
-        //»ñÈ¡ dnsÓ³ÉäµÄ µØÖ· ÁĞ±í µÄ±ğÃû
+        //è·å– dnsæ˜ å°„çš„ åœ°å€ åˆ—è¡¨ çš„åˆ«å
         for (int i = 0; i < value.Aliases.Length; i++)
         {
             Debug.Log(value.Aliases[i]);
         }
-        //»ñÈ¡ ¸ÃÓòÃû ËùÔÚµÄÖ÷»úÃû¡£
+        //è·å– è¯¥åŸŸå æ‰€åœ¨çš„ä¸»æœºåã€‚
         Debug.Log(value.HostName);
     }
 

@@ -1,0 +1,8 @@
+F:\StudyNet\Server\bin\Debug\Server.exe.config
+F:\StudyNet\Server\bin\Debug\Server.exe
+F:\StudyNet\Server\bin\Debug\Server.pdb
+F:\StudyNet\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+F:\StudyNet\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+F:\StudyNet\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+F:\StudyNet\Server\obj\Debug\Server.exe
+F:\StudyNet\Server\obj\Debug\Server.pdb
