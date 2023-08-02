@@ -6,3 +6,11 @@ F:\StudyNet\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
 F:\StudyNet\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
 F:\StudyNet\Server\obj\Debug\Server.exe
 F:\StudyNet\Server\obj\Debug\Server.pdb
+E:\UnityProgram\StudyNet\Server\bin\Debug\Server.exe.config
+E:\UnityProgram\StudyNet\Server\bin\Debug\Server.exe
+E:\UnityProgram\StudyNet\Server\bin\Debug\Server.pdb
+E:\UnityProgram\StudyNet\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+E:\UnityProgram\StudyNet\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\Server\obj\Debug\Server.exe
+E:\UnityProgram\StudyNet\Server\obj\Debug\Server.pdb
