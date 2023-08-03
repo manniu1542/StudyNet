@@ -14,3 +14,6 @@ Unity/.vs/
 Unity/.vsconfig
 Unity/Assembly-CSharp.csproj
 Unity/Unity.sln
+
+Server/.vs/
+Server/.vs
