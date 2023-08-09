@@ -72,8 +72,7 @@ namespace TestThreadServerClientSocket
 
                 while (isLanuch)
                 {
-
-
+                 
 
                     var arr = dicClientSocket.Values.ToList();
 
