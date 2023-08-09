@@ -1,0 +1,15 @@
+F:\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever.exe
+F:\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever.deps.json
+F:\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever.runtimeconfig.json
+F:\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever.dll
+F:\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever.pdb
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever.csproj.AssemblyReference.cache
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever.GeneratedMSBuildEditorConfig.editorconfig
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever.AssemblyInfoInputs.cache
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever.AssemblyInfo.cs
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever.csproj.CoreCompileInputs.cache
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever.dll
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\refint\TestTheardSever.dll
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever.pdb
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever.genruntimeconfig.cache
+F:\StudyNet\TestTheardSever\obj\Debug\net6.0\ref\TestTheardSever.dll
