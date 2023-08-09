@@ -61,7 +61,7 @@ public class NetMgr
             catch (SocketException e)
             {
 
-
+                Debug.LogError(e.Message);
             }
 
 
@@ -97,15 +97,16 @@ public class NetMgr
             {
                 if (queueSend.Count > 0)
                 {
-                    socket.Send(Encoding.UTF8.GetBytes(queueSend.Dequeue()));
-                    Debug.Log("发送消息：" + queueSend.Dequeue());
+                    var str = queueSend.Dequeue();
+                    socket.Send(Encoding.UTF8.GetBytes(str));
+                    Debug.Log("发送消息：" + str);
                 }
 
             }
             catch (SocketException e)
             {
 
-
+                Debug.LogError(e.Message);
             }
 
 
@@ -128,7 +129,7 @@ public class NetMgr
         }
         catch (SocketException e)
         {
-
+            Debug.LogError(e.Message);
 
         }
 

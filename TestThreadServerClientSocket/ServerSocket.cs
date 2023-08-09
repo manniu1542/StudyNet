@@ -27,7 +27,13 @@ namespace TestThreadServerClientSocket
                 socket.Bind(new IPEndPoint(IPAddress.Parse(ip), port));
 
                 socket.Listen(connectMaxCount);
+
+
                 isLanuch = true;
+
+
+                Task.Run(Accept);
+                Task.Run(Receive);
             }
             catch (SocketException se)
             {
@@ -66,12 +72,17 @@ namespace TestThreadServerClientSocket
 
                 while (isLanuch)
                 {
-                    if (dicClientSocket.Count > 0)
-                        foreach (var clientSocket in dicClientSocket.Values)
-                        {
-                            clientSocket?.Receive();
 
-                        }
+
+
+                    var arr = dicClientSocket.Values.ToList();
+
+
+                    for (int i = 0; i < arr.Count; i++)
+                    {
+                        arr[i]?.Receive();
+                    }
+
 
 
 
@@ -84,7 +95,7 @@ namespace TestThreadServerClientSocket
                 Console.WriteLine($"错误{se.ErrorCode}：{se.Message}");
             }
         }
-        public void SendAll(string msg)
+        public void Broadcast(string msg)
         {
 
             try
@@ -92,13 +103,11 @@ namespace TestThreadServerClientSocket
 
                 if (isLanuch)
                 {
-                    if (dicClientSocket.Count > 0)
-                        foreach (var clientSocket in dicClientSocket.Values)
-                        {
-
-                            clientSocket?.Send(msg);
-
-                        }
+                    var arr = dicClientSocket.Values.ToList();
+                    for (int i = 0; i < arr.Count; i++)
+                    {
+                        arr[i]?.Send(msg);
+                    }
 
 
                 }

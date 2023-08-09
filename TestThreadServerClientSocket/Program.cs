@@ -9,8 +9,7 @@
             ServerSocket server = new ServerSocket();
             server.Start("127.0.0.1", 8088, 100);
 
-            Task.Run(server.Accept);
-            Task.Run(server.Receive);
+       
             Console.WriteLine("启动服务器！");
             while (true)
             {
@@ -24,7 +23,7 @@
                 else if (str.Contains("B:"))
                 {
                     string gg = str.Substring(2);
-                    server.SendAll(gg);
+                    server.Broadcast(gg);
 
                 }
 
