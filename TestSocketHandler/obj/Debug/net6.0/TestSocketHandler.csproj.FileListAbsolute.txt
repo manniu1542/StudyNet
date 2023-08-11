@@ -1,0 +1,15 @@
+F:\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler.exe
+F:\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler.deps.json
+F:\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler.runtimeconfig.json
+F:\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler.dll
+F:\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler.pdb
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler.csproj.AssemblyReference.cache
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler.GeneratedMSBuildEditorConfig.editorconfig
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler.AssemblyInfoInputs.cache
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler.AssemblyInfo.cs
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler.csproj.CoreCompileInputs.cache
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler.dll
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\refint\TestSocketHandler.dll
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler.pdb
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler.genruntimeconfig.cache
+F:\StudyNet\TestSocketHandler\obj\Debug\net6.0\ref\TestSocketHandler.dll

@@ -21,9 +21,9 @@ public class BaseData
 
     //}
     //继承的类转byte  类对象 的值怎么 获取 
-    public int GetLen(Type t)
+    public virtual int GetLen()
     {
-
+        Type t = this.GetType();
         FieldInfo[] fi = t.GetFields();
 
         int len = 0;
@@ -48,10 +48,6 @@ public class BaseData
             {
                 len += sizeof(bool);
             }
-            else if (fi[i].FieldType.IsSubclassOf(typeof(BaseData)))
-            {
-                len += GetLen(fi[i].FieldType);
-            }
             else
             {
                 Debug.LogError("漏掉序列化的属性：" + fi[i].Name);
@@ -62,20 +58,15 @@ public class BaseData
         }
         return len;
     }
-    public int GetLen<T>() where T : BaseData
-    {
 
-        Type t = typeof(T);
-        return GetLen(t);
-    }
-    public byte[] ToByte<T>() where T : BaseData
+    public virtual byte[] ToByte()
     {
         //获取所有子级
 
 
-        Type t = typeof(T);
+        Type t = this.GetType();
 
-        int len = GetLen<T>();
+        int len = GetLen();
         byte[] arrByte = new byte[len];
 
 
@@ -127,13 +118,13 @@ public class BaseData
         return arrByte;
     }
 
-    public object ToDataByByte(Type type, byte[] arrByte)
+    public virtual BaseData DataByByte(byte[] arrByte)
     {
         //检查字节是否 是所需要的。
 
 
+        Type type = this.GetType();
 
-        object obj = Activator.CreateInstance(type);
         FieldInfo[] fi = type.GetFields();
 
         int curIdx = 0;
@@ -144,7 +135,7 @@ public class BaseData
             {
 
                 int v = BitConverter.ToInt32(arrByte, curIdx);
-                fi[i].SetValue(obj, v);
+                fi[i].SetValue(this, v);
 
                 curIdx += sizeof(int);
 
@@ -153,7 +144,7 @@ public class BaseData
             else if (fi[i].FieldType == typeof(long))
             {
                 long vc = BitConverter.ToInt64(arrByte, curIdx);
-                fi[i].SetValue(obj, vc);
+                fi[i].SetValue(this, vc);
 
                 curIdx += sizeof(long);
 
@@ -167,23 +158,23 @@ public class BaseData
 
 
                 string str = Encoding.UTF8.GetString(arrByte, curIdx, v);
-                fi[i].SetValue(obj, str);
+                fi[i].SetValue(this, str);
 
                 curIdx += Encoding.UTF8.GetByteCount(str);
             }
             else if (fi[i].FieldType == typeof(bool))
             {
                 bool v2 = BitConverter.ToBoolean(arrByte, curIdx);
-                fi[i].SetValue(obj, v2);
+                fi[i].SetValue(this, v2);
 
                 curIdx += sizeof(bool);
 
             }
-
-
+           
 
         }
-        return obj;
+
+        return this;
 
     }
 }
@@ -193,7 +184,7 @@ public class BaseData
 [Serializable]
 public class TestStep30 : BaseData
 {
-    public TestStep30 ggg;
+
     public int a;
     public string b;
     public bool c;
@@ -250,15 +241,15 @@ public class LessonStep30 : MonoBehaviour
 
     public void Lesson30_2()
     {
-        var arr = test.ToByte<TestStep30>();
+        var arr = test.ToByte();
 
         TestStep30 tt = new TestStep30();
-        var gg = tt.ToDataByByte(typeof(TestStep30), arr) as TestStep30;
+        tt.DataByByte(arr);
 
-        Debug.Log(gg.a);
-        Debug.Log(gg.b);
-        Debug.Log(gg.c);
-        Debug.Log(gg.d);
+        Debug.Log(tt.a);
+        Debug.Log(tt.b);
+        Debug.Log(tt.c);
+        Debug.Log(tt.d);
 
     }
     // Update is called once per frame
