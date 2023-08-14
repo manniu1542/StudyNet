@@ -1,13 +1,20 @@
-﻿using System.Net.Sockets;
+﻿using System;
+using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace TestThreadServerClientSocket
 {
+
+ 
+
     internal class ClientSocket
     {
         public static int ClientSocketID = 0;
         public int id;
         Socket socket;
+
+
 
         public ClientSocket(Socket s)
         {
@@ -20,29 +27,53 @@ namespace TestThreadServerClientSocket
             if (socket == null) return;
             if (socket.Available > 0)
             {
-                byte[] arrByte = new byte[1024 * 5];
+                int preCount = 20;
+                byte[] arrByte = new byte[preCount];
+
+
+            
                 int receiveNum = socket.Receive(arrByte);
+
+
                 //解析出类型：
-                byte[] data = new byte[receiveNum];
-                Array.Copy(arrByte, data, receiveNum);
+                int handlerType = BitConverter.ToInt32(arrByte, 0);
 
 
-                HandleMsg(data);
+
+
+                object obj = null;
+                switch (handlerType)
+                {
+                    case HandlerCode.Handler_EnterRoom:
+                        PlayData data = new PlayData();
+                        data.DataByByte(arrByte, 4);
+
+                        obj = data;
+                        break;
+
+                    default:
+                        break;
+                }
+
+
+
+                HandleMsg(obj);
                 //为什么 启用 线程的原因是，怕处理消息时候 ，会造成 其他消息的等待， 但是 ReceiveClientSocket 已经是 一个单独线程了。
-                //ThreadPool.QueueUserWorkItem(HandleMsg, str);
+                //ThreadPool.QueueUserWorkItem(HandleMsg, obj);
             }
         }
         void HandleMsg(object? obj)
         {
             if (socket == null) return;
-            byte[] str = obj as byte[];
+            if (obj is PlayData)
+            {
+                PlayData data = obj as PlayData;
+                Console.WriteLine($"收到{socket.RemoteEndPoint}消息：玩家的 id{data.id},名字：{data.name},年龄{data.age}，性别：{data.isMan}");
+            }
 
-            PlayData data = new PlayData();
-            data.DataByByte(str);
-            Console.WriteLine($"收到{socket.RemoteEndPoint}消息：玩家的 id{data.id},名字：{data.name},年龄{data.age}，性别：{data.isMan}");
 
         }
-        public void Send(byte[] arr)
+        public void Send(BaseMsgData md)
         {
             if (socket == null) return;
             try
@@ -50,7 +81,7 @@ namespace TestThreadServerClientSocket
 
 
 
-                socket.Send(arr);
+                socket.Send(md.ToByte());
             }
             catch (Exception)
             {

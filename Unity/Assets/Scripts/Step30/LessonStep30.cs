@@ -12,6 +12,7 @@ using UnityEditor;
 using UnityEngine;
 
 
+
 public class BaseData
 {
     ////枚举转 byte
@@ -38,6 +39,10 @@ public class BaseData
             {
                 len += sizeof(long);
             }
+            else if (fi[i].FieldType == typeof(short))
+            {
+                len += sizeof(short);
+            }
             else if (fi[i].FieldType == typeof(string))
             {
                 string tt = fi[i].GetValue(this) as string;
@@ -47,6 +52,14 @@ public class BaseData
             else if (fi[i].FieldType == typeof(bool))
             {
                 len += sizeof(bool);
+            }
+            else if (fi[i].FieldType.IsSubclassOf(typeof(BaseData)))
+            {
+                BaseData bd = fi[i].GetValue(this) as BaseData;
+                if (bd == null)
+                    bd = Activator.CreateInstance(fi[i].FieldType) as BaseData;
+
+                len += bd.GetLen();
             }
             else
             {
@@ -87,6 +100,11 @@ public class BaseData
                 BitConverter.GetBytes((long)o).CopyTo(arrByte, curIdx);
                 curIdx += sizeof(long);
             }
+            else if (fi[i].FieldType == typeof(short))
+            {
+                BitConverter.GetBytes((short)o).CopyTo(arrByte, curIdx);
+                curIdx += sizeof(short);
+            }
             else if (fi[i].FieldType == typeof(string))
             {
                 string tt = fi[i].GetValue(this) as string;
@@ -110,7 +128,16 @@ public class BaseData
                 BitConverter.GetBytes((bool)o).CopyTo(arrByte, curIdx);
                 curIdx += sizeof(bool);
             }
+            else if (fi[i].FieldType.IsSubclassOf(typeof(BaseData)))
+            {
+                BaseData bd = fi[i].GetValue(this) as BaseData;
+                if (bd == null)
+                    bd = Activator.CreateInstance(fi[i].FieldType) as BaseData;
 
+                bd.ToByte().CopyTo(arrByte, curIdx);
+                curIdx += bd.GetLen();
+
+            }
 
 
         }
@@ -118,7 +145,7 @@ public class BaseData
         return arrByte;
     }
 
-    public virtual BaseData DataByByte(byte[] arrByte)
+    public virtual int DataByByte(byte[] arrByte, int curIdx = 0)
     {
         //检查字节是否 是所需要的。
 
@@ -127,7 +154,6 @@ public class BaseData
 
         FieldInfo[] fi = type.GetFields();
 
-        int curIdx = 0;
         for (int i = 0; i < fi.Length; i++)
         {
 
@@ -148,6 +174,13 @@ public class BaseData
 
                 curIdx += sizeof(long);
 
+            }
+            else if (fi[i].FieldType == typeof(short))
+            {
+                short vc = BitConverter.ToInt16(arrByte, curIdx);
+                fi[i].SetValue(this, vc);
+
+                curIdx += sizeof(short);
             }
             else if (fi[i].FieldType == typeof(string))
             {
@@ -170,16 +203,55 @@ public class BaseData
                 curIdx += sizeof(bool);
 
             }
-           
+            else if (fi[i].FieldType.IsSubclassOf(typeof(BaseData)))
+            {
+                BaseData bd = fi[i].GetValue(this) as BaseData;
+                if (bd == null)
+                {
+                    bd = Activator.CreateInstance(fi[i].FieldType) as BaseData;
+                    fi[i].SetValue(this, bd);
+                }
+
+                curIdx = bd.DataByByte(arrByte, curIdx);
+
+            }
+
 
         }
-
-        return this;
+        return curIdx;
 
     }
+
+    public override string ToString()
+    {
+        string str = "{\n";
+        Type type = this.GetType();
+
+        FieldInfo[] fi = type.GetFields();
+
+        for (int i = 0; i < fi.Length; i++)
+        {
+
+            object o = fi[i].GetValue(this);
+            if (fi[i].FieldType.IsSubclassOf(typeof(BaseData)))
+            {
+                BaseData bd = o as BaseData;
+                if (bd == null)
+                    str += $" {fi[i].Name}:null \n";
+                else
+                    str += $" {fi[i].Name}:{o} \n";
+
+            }
+            else
+            {
+                str += $" {fi[i].Name}:{o} \n";
+            }
+        }
+        str += "}";
+        return str;
+    }
+
 }
-
-
 
 [Serializable]
 public class TestStep30 : BaseData

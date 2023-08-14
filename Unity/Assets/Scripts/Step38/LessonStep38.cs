@@ -12,26 +12,10 @@ using UnityEngine.UI;
 
 public static class HandlerCode
 {
-    public static int Handler_EnterRoom = 1000;
-    public static int Handler_EnterRoom2 = 1002;
+    public const int Handler_EnterRoom = 1000;
+    public const int Handler_QuitRoom = 1002;
 
-    public static (BaseData, string) GetHandlerStr(byte[] msg)
-    {
-        int value = BitConverter.ToInt32(msg, 0);
-        if (Handler_EnterRoom == value)
-        {
-            return (new PlayData().DataByByte(msg), "进入房间");
-        }
-        else if (Handler_EnterRoom2 == value)
-        {
 
-            return (new PlayData().DataByByte(msg), "进入房间2");
-        }
-        else
-        {
-            return (null, "错误：消息不存在");
-        }
-    }
     public static int TypeToHandlerId(Type type)
     {
         if (type == typeof(PlayData))
@@ -41,7 +25,7 @@ public static class HandlerCode
         else if (type == typeof(PlayData))
         {
 
-            return Handler_EnterRoom2;
+            return Handler_QuitRoom;
         }
         else
         {
@@ -76,36 +60,6 @@ public class BaseMsgData : BaseData
         return arrMsg;
     }
 
-    public override BaseData DataByByte(byte[] arrByte)
-    {
-        //拿出前四个
-
-        if (arrByte == null || arrByte.Length <= 4)
-        {
-            return null;
-        }
-
-
-        int handlerID = BitConverter.ToInt32(arrByte, 0);
-
-        byte[] arrData = new byte[arrByte.Length - 4];
-        System.Array.Copy(arrByte, 4, arrData, 0, arrData.Length);
-
-
-        if (handlerID != -1)
-        {
-            return base.DataByByte(arrData);
-        }
-        else
-        {
-            Debug.Log("这个 消息码没有定义：" + handlerID);
-            return null;
-        }
-
-
-
-    }
-
 
 
 
@@ -117,8 +71,8 @@ public class NetMgr38
 {
     public static readonly NetMgr38 Ins = new NetMgr38();
     public Socket socket;
-    public Queue<byte[]> queueSend = new Queue<byte[]>();
-    public Queue<byte[]> queueReceive = new Queue<byte[]>();
+    public Queue<BaseMsgData> queueSend = new Queue<BaseMsgData>();
+    public Queue<BaseMsgData> queueReceive = new Queue<BaseMsgData>();
     //连入 的方法
     public void Connect(string ip, int port)
     {
@@ -155,8 +109,24 @@ public class NetMgr38
                 if (socket.Available > 0)
                 {
                     byte[] buffer = new byte[1024 * 4];
-                    var i = socket.Receive(buffer);
-                    queueReceive.Enqueue(buffer);
+                    var receiveNum = socket.Receive(buffer);
+
+                    int handlerType = BitConverter.ToInt32(buffer, 0);
+
+                    switch (handlerType)
+                    {
+                        case HandlerCode.Handler_EnterRoom:
+                            PlayData data = new PlayData();
+                            data.DataByByte(buffer, 4);
+                            queueReceive.Enqueue(data);
+
+                            break;
+
+                        default:
+                            break;
+                    }
+
+
 
                 }
 
@@ -177,22 +147,15 @@ public class NetMgr38
     {
         if (queueReceive.Count > 0)
         {
-            byte[] arr = queueReceive.Dequeue();
-            var info = HandlerCode.GetHandlerStr(arr);
-            Debug.Log("收到消息：" + info.Item2);
+            var obj = queueReceive.Dequeue();
 
-            if (info.Item1 != null)
+
+
+            if (obj is PlayData)
             {
-                int value = HandlerCode.TypeToHandlerId(info.Item1.GetType());
-                if (value == HandlerCode.Handler_EnterRoom)
-                {
-                    PlayData data = info.Item1 as PlayData;
-                    Debug.Log($"收到消息：玩家的 id{data.id},名字：{data.name},年龄{data.age}，性别：{data.isMan}");
-                }
-
-
+                var data = obj as PlayData;
+                Debug.Log($"收到{socket.RemoteEndPoint}消息：玩家的 id{data.id},名字：{data.name},年龄{data.age}，性别：{data.isMan}");
             }
-
 
 
         }
@@ -200,10 +163,10 @@ public class NetMgr38
 
     }
     //发送 消息的方法
-    public void Send(byte[] msg)
+    public void Send(BaseMsgData md)
     {
         if (socket == null) return;
-        queueSend.Enqueue(msg);
+        queueSend.Enqueue(md);
 
     }
     private void SendServer(object o)
@@ -216,9 +179,9 @@ public class NetMgr38
             {
                 if (queueSend.Count > 0)
                 {
+                    Debug.Log("上传消息：");
+                    socket.Send(queueSend.Dequeue().ToByte());
 
-                    socket.Send(queueSend.Dequeue());
-                    Debug.Log("发送消息：");
                 }
 
             }
@@ -290,9 +253,9 @@ public class LessonStep38 : MonoBehaviour
                 data.age = 12;
                 data.name = ifMsg.text;//"张望历代";
                 data.id = 33;
-                byte[] arr = data.ToByte();
-                NetMgr38.Ins.Send(arr);
 
+                NetMgr38.Ins.Send(data);
+                Debug.Log("点击发送了 消息！");
 
             }
 

@@ -1,0 +1,15 @@
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag.exe
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag.deps.json
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag.runtimeconfig.json
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag.dll
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag.pdb
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag.AssemblyInfoInputs.cache
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag.AssemblyInfo.cs
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag.dll
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\refint\TestSocketBag.dll
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag.pdb
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag.genruntimeconfig.cache
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\ref\TestSocketBag.dll

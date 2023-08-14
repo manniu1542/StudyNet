@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTheardSever", "..\TestT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestThreadServerClientSocket", "..\TestThreadServerClientSocket\TestThreadServerClientSocket.csproj", "{2F856247-FB22-4655-9758-B21C6A199435}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSocketHandler", "..\TestSocketHandler\TestSocketHandler.csproj", "{43FE83D8-456F-4236-A8F0-F2F6B5EFD34F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSocketHandler", "..\TestSocketHandler\TestSocketHandler.csproj", "{43FE83D8-456F-4236-A8F0-F2F6B5EFD34F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSocketBag", "..\TestSocketBag\TestSocketBag.csproj", "{95EA5548-D815-4C7C-A008-59DDA89B90BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{43FE83D8-456F-4236-A8F0-F2F6B5EFD34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43FE83D8-456F-4236-A8F0-F2F6B5EFD34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43FE83D8-456F-4236-A8F0-F2F6B5EFD34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95EA5548-D815-4C7C-A008-59DDA89B90BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95EA5548-D815-4C7C-A008-59DDA89B90BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95EA5548-D815-4C7C-A008-59DDA89B90BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95EA5548-D815-4C7C-A008-59DDA89B90BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
