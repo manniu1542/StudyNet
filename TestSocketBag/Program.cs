@@ -23,11 +23,10 @@
                 else if (str.Contains("B:") && str.Length > 2)
                 {
                     string gg = str.Substring(2);
-                    PlayData data = new PlayData();
-                    data.age = 13;
-                    data.name = gg;
-                    data.isMan = true;
-                    data.id = 44;
+                    QuitRoomMsg data = new QuitRoomMsg();
+                    data.msg.age = 13;
+                    data.msg.name = gg;
+        
 
                     server.Broadcast(data);
 

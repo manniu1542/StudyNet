@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace TestThreadServerClientSocket
 {
 
-    public class BaseData
+    public abstract class BaseData
     {
         ////枚举转 byte
         //private byte[] StructToByte<H>(H t) where H : struct
@@ -35,6 +35,10 @@ namespace TestThreadServerClientSocket
                 {
                     len += sizeof(long);
                 }
+                else if (fi[i].FieldType == typeof(short))
+                {
+                    len += sizeof(short);
+                }
                 else if (fi[i].FieldType == typeof(string))
                 {
                     string tt = fi[i].GetValue(this) as string;
@@ -45,9 +49,17 @@ namespace TestThreadServerClientSocket
                 {
                     len += sizeof(bool);
                 }
+                else if (fi[i].FieldType.IsSubclassOf(typeof(BaseData)))
+                {
+                    BaseData bd = fi[i].GetValue(this) as BaseData;
+                    if (bd == null)
+                        bd = Activator.CreateInstance(fi[i].FieldType) as BaseData;
+
+                    len += bd.GetLen();
+                }
                 else
                 {
-                    Console.Write("漏掉序列化的属性：" + fi[i].Name);
+                    Console.WriteLine("漏掉序列化的属性：" + fi[i].Name);
                 }
 
 
@@ -84,6 +96,11 @@ namespace TestThreadServerClientSocket
                     BitConverter.GetBytes((long)o).CopyTo(arrByte, curIdx);
                     curIdx += sizeof(long);
                 }
+                else if (fi[i].FieldType == typeof(short))
+                {
+                    BitConverter.GetBytes((short)o).CopyTo(arrByte, curIdx);
+                    curIdx += sizeof(short);
+                }
                 else if (fi[i].FieldType == typeof(string))
                 {
                     string tt = fi[i].GetValue(this) as string;
@@ -107,7 +124,16 @@ namespace TestThreadServerClientSocket
                     BitConverter.GetBytes((bool)o).CopyTo(arrByte, curIdx);
                     curIdx += sizeof(bool);
                 }
+                else if (fi[i].FieldType.IsSubclassOf(typeof(BaseData)))
+                {
+                    BaseData bd = fi[i].GetValue(this) as BaseData;
+                    if (bd == null)
+                        bd = Activator.CreateInstance(fi[i].FieldType) as BaseData;
 
+                    bd.ToByte().CopyTo(arrByte, curIdx);
+                    curIdx += bd.GetLen();
+
+                }
 
 
             }
@@ -115,7 +141,7 @@ namespace TestThreadServerClientSocket
             return arrByte;
         }
 
-        public virtual void DataByByte(byte[] arrByte, int curIdx = 0)
+        public virtual int DataByByte(byte[] arrByte, int curIdx = 0)
         {
             //检查字节是否 是所需要的。
 
@@ -145,6 +171,13 @@ namespace TestThreadServerClientSocket
                     curIdx += sizeof(long);
 
                 }
+                else if (fi[i].FieldType == typeof(short))
+                {
+                    short vc = BitConverter.ToInt16(arrByte, curIdx);
+                    fi[i].SetValue(this, vc);
+
+                    curIdx += sizeof(short);
+                }
                 else if (fi[i].FieldType == typeof(string))
                 {
 
@@ -166,66 +199,133 @@ namespace TestThreadServerClientSocket
                     curIdx += sizeof(bool);
 
                 }
+                else if (fi[i].FieldType.IsSubclassOf(typeof(BaseData)))
+                {
+                    BaseData bd = fi[i].GetValue(this) as BaseData;
+                    if (bd == null)
+                    {
+                        bd = Activator.CreateInstance(fi[i].FieldType) as BaseData;
+                        fi[i].SetValue(this, bd);
+                    }
+
+                    curIdx = bd.DataByByte(arrByte, curIdx);
+
+                }
 
 
             }
-
+            return curIdx;
 
         }
-    }
 
-    public static class HandlerCode
-    {
-        public const int Handler_EnterRoom = 1000;
-        public const int Handler_EnterRoom2 = 1002;
-
-
-        public static int TypeToHandlerId(Type type)
+        public override string ToString()
         {
-            if (type == typeof(PlayData))
-            {
-                return Handler_EnterRoom;
-            }
-            else if (type == typeof(PlayData))
+            string str = "{\n";
+            Type type = this.GetType();
+
+            FieldInfo[] fi = type.GetFields();
+
+            for (int i = 0; i < fi.Length; i++)
             {
 
-                return Handler_EnterRoom2;
+                object o = fi[i].GetValue(this);
+                if (fi[i].FieldType.IsSubclassOf(typeof(BaseData)))
+                {
+                    BaseData bd = o as BaseData;
+                    if (bd == null)
+                        str += $" {fi[i].Name}:null \n";
+                    else
+                        str += $" {fi[i].Name}:{o} \n";
+
+                }
+                else
+                {
+                    str += $" {fi[i].Name}:{o} \n";
+                }
             }
-            else
-            {
-                return -1;
-            }
+            str += "}";
+            return str;
         }
 
     }
 
-    public class PlayData : BaseMsgData
+    public class QuitRoomData : BaseData
     {
-        public string name;
         public int age;
-        public int id;
-        public bool isMan;
+        public string name;
     }
-    public class BaseMsgData : BaseData
+
+    public abstract class BaseMsgData : BaseData
     {
+        public int id;
+        public abstract int GetID();
 
-
+        public override int GetLen()
+        {  //长度 + id
+            return 4 + 4 + base.GetLen();
+        }
 
         public override byte[] ToByte()
         {
+            int len = this.GetLen();
+            int handlerId = this.GetID();
             byte[] tmp = base.ToByte();
-            int handlerId = HandlerCode.TypeToHandlerId(this.GetType());
+            byte[] arrMsg = new byte[len];
 
-            byte[] arrMsg = new byte[tmp.Length + 4];
-            BitConverter.GetBytes(handlerId).CopyTo(arrMsg, 0);
 
-            tmp.CopyTo(arrMsg, 4);
+
+            BitConverter.GetBytes(len).CopyTo(arrMsg, 0);
+            BitConverter.GetBytes(handlerId).CopyTo(arrMsg, 4);
+
+            tmp.CopyTo(arrMsg, 8);
+
+
+
+
+
+
+
+
 
             return arrMsg;
         }
 
 
+        public override int DataByByte(byte[] arrByte, int curIdx = 0)
+        {
+
+            id = BitConverter.ToInt32(arrByte, curIdx + 4);
+
+
+            curIdx = base.DataByByte(arrByte, curIdx + 8);
+
+
+            return curIdx;
+        }
+
 
 
     }
+
+
+    public class QuitRoomMsg : BaseMsgData
+    {
+        public QuitRoomData msg;
+        public override int GetID()
+        {
+            return HandlerCode.Handler_QuitRoom;
+        }
+
+
+    }
+
+    public static class HandlerCode
+    {
+        public const int Handler_EnterRoom = 1000;
+        public const int Handler_QuitRoom = 1002;
+
+
+
+    }
+
 }

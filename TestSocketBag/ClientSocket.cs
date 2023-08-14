@@ -15,7 +15,7 @@ namespace TestThreadServerClientSocket
         public int id;
         Socket socket;
 
-        public const int preCount = 20;
+        public const int preCount = 1024;
         byte[] arrByte = new byte[preCount];
 
         ReceiveByteChacheAnlyze rbca;
@@ -58,43 +58,22 @@ namespace TestThreadServerClientSocket
                     {
 
                         //解析 读取的长度
-                        var tmp = new byte[arrByte.Length];
-                        arrByte.CopyTo(tmp, 0);
-                        rbca.Analyzi(tmp, bytesRead);
+
+                        rbca.Analyzi(ref arrByte, bytesRead);
 
                         //取出完整的队列
                         int len = rbca.queueFinish.Count;
-                        byte[] arrTmp;
+
                         for (int i = 0; i < len; i++)
                         {
-                            arrTmp = rbca.queueFinish.Dequeue();
+                            var obj = rbca.queueFinish.Dequeue();
+                            //HandleMsg(obj);
 
-                            //解析出类型：
-                            int handlerType = BitConverter.ToInt32(arrTmp, 4);
-
-                            object obj = null;
-                            switch (handlerType)
-                            {
-                                case HandlerCode.Handler_EnterRoom:
-                                    PlayData data = new PlayData();
-                                    data.DataByByte(arrTmp, 8);
-
-                                    obj = data;
-                                    break;
-
-                                default:
-                                    break;
-                            }
-
-
-
-                            HandleMsg(obj);
-
-
+                            //为什么 启用 线程的原因是，怕处理消息时候 ，会造成 其他消息的等待， 但是 ReceiveClientSocket 已经是 一个单独线程了。
+                            ThreadPool.QueueUserWorkItem(HandleMsg, obj);
                         }
 
-                        //为什么 启用 线程的原因是，怕处理消息时候 ，会造成 其他消息的等待， 但是 ReceiveClientSocket 已经是 一个单独线程了。
-                        //ThreadPool.QueueUserWorkItem(HandleMsg, obj);
+
 
 
                     }
@@ -110,10 +89,10 @@ namespace TestThreadServerClientSocket
         void HandleMsg(object? obj)
         {
             if (socket == null) return;
-            if (obj is PlayData)
+            if (obj is QuitRoomMsg)
             {
-                PlayData data = obj as PlayData;
-                Console.WriteLine($"收到{socket.RemoteEndPoint}消息：玩家的 id{data.id},名字：{data.name},年龄{data.age}，性别：{data.isMan}");
+                QuitRoomMsg data = obj as QuitRoomMsg;
+                Console.WriteLine($"收到{socket.RemoteEndPoint}消息：玩家的 名字：{data.msg.name},年龄{data.msg.age}");
             }
 
 

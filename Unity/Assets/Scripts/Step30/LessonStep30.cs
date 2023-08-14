@@ -13,7 +13,7 @@ using UnityEngine;
 
 
 
-public class BaseData
+public abstract class BaseData
 {
     ////枚举转 byte
     //private byte[] StructToByte<H>(H t) where H : struct
