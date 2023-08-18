@@ -1,0 +1,15 @@
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc.csproj.AssemblyReference.cache
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc.GeneratedMSBuildEditorConfig.editorconfig
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc.AssemblyInfoInputs.cache
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc.AssemblyInfo.cs
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc.csproj.CoreCompileInputs.cache
+F:\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc.exe
+F:\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc.deps.json
+F:\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc.runtimeconfig.json
+F:\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc.dll
+F:\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc.pdb
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc.dll
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\refint\StepRealy32Asyc.dll
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc.pdb
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc.genruntimeconfig.cache
+F:\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\ref\StepRealy32Asyc.dll

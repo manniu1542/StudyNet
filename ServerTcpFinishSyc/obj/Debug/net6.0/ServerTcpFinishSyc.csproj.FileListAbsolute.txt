@@ -1,0 +1,15 @@
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\ServerTcpFinishSyc.csproj.AssemblyReference.cache
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\ServerTcpFinishSyc.GeneratedMSBuildEditorConfig.editorconfig
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\ServerTcpFinishSyc.AssemblyInfoInputs.cache
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\ServerTcpFinishSyc.AssemblyInfo.cs
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\ServerTcpFinishSyc.csproj.CoreCompileInputs.cache
+F:\StudyNet\ServerTcpFinishSyc\bin\Debug\net6.0\ServerTcpFinishSyc.exe
+F:\StudyNet\ServerTcpFinishSyc\bin\Debug\net6.0\ServerTcpFinishSyc.deps.json
+F:\StudyNet\ServerTcpFinishSyc\bin\Debug\net6.0\ServerTcpFinishSyc.runtimeconfig.json
+F:\StudyNet\ServerTcpFinishSyc\bin\Debug\net6.0\ServerTcpFinishSyc.dll
+F:\StudyNet\ServerTcpFinishSyc\bin\Debug\net6.0\ServerTcpFinishSyc.pdb
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\ServerTcpFinishSyc.dll
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\refint\ServerTcpFinishSyc.dll
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\ServerTcpFinishSyc.pdb
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\ServerTcpFinishSyc.genruntimeconfig.cache
+F:\StudyNet\ServerTcpFinishSyc\obj\Debug\net6.0\ref\ServerTcpFinishSyc.dll

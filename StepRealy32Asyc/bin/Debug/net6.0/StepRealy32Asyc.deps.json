@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "StepRealy32Asyc/1.0.0": {
+        "runtime": {
+          "StepRealy32Asyc.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StepRealy32Asyc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

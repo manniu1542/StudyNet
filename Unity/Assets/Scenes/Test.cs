@@ -5,11 +5,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class MainSynchronizationContext : SynchronizationContext
+public class MainSynchronizationContext2 : SynchronizationContext
 {
-    public static MainSynchronizationContext Instance { get; } = new MainSynchronizationContext(Thread.CurrentThread.ManagedThreadId);
+    public static MainSynchronizationContext2 Instance { get; } = new MainSynchronizationContext2(Thread.CurrentThread.ManagedThreadId);
     private int curThreadId;
-    MainSynchronizationContext(int cti)
+    MainSynchronizationContext2(int cti)
     {
         curThreadId = cti;
         Debug.Log("当前同步上下文的线程id：" + Thread.CurrentThread.ManagedThreadId);
@@ -33,11 +33,11 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     public Canvas canvas;
     public Transform tf;
-    public MainSynchronizationContext msc;
+    public MainSynchronizationContext2 msc;
     void Start()
     {
 
-        msc = MainSynchronizationContext.Instance;
+        msc = MainSynchronizationContext2.Instance;
         print("1当前同步上下文的线程id：" + Thread.CurrentThread.ManagedThreadId);
 
         SendOrPostCallback sendOrPostCallback = state =>

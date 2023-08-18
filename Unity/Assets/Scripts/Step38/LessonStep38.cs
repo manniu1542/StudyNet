@@ -14,7 +14,7 @@ public static class HandlerCode
 {
     public const int Handler_EnterRoom = 1000;
     public const int Handler_QuitRoom = 1002;
-
+    public const int Handler_QuitGame = 1003;
 
     public static int TypeToHandlerId(Type type)
     {
@@ -26,6 +26,11 @@ public static class HandlerCode
         {
 
             return Handler_QuitRoom;
+        }
+        else if (type == typeof(LessonStep40.QuitGameData))
+        {
+
+            return Handler_QuitGame;
         }
         else
         {

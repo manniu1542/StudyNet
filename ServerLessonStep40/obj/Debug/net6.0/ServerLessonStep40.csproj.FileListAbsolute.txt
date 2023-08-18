@@ -1,0 +1,15 @@
+F:\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40.exe
+F:\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40.deps.json
+F:\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40.runtimeconfig.json
+F:\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40.dll
+F:\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40.pdb
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40.csproj.AssemblyReference.cache
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40.GeneratedMSBuildEditorConfig.editorconfig
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40.AssemblyInfoInputs.cache
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40.AssemblyInfo.cs
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40.csproj.CoreCompileInputs.cache
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40.dll
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\refint\ServerLessonStep40.dll
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40.pdb
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40.genruntimeconfig.cache
+F:\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ref\ServerLessonStep40.dll

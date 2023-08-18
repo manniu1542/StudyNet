@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,19 +11,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-using BaseMsgData = LessonStep39.BaseMsgData;
+using BaseMsgData = LessonStep40.BaseMsgData;
 
-namespace LessonStep39
+namespace LessonStep40
 {
 
-    public class NetMgr39
+    public class NetMgr40
     {
 
-        public static readonly NetMgr39 Ins = new NetMgr39();
+        public static readonly NetMgr40 Ins = new NetMgr40();
         public Socket socket;
         public Queue<BaseMsgData> queueSend = new Queue<BaseMsgData>();
         public Queue<BaseMsgData> queueReceive = new Queue<BaseMsgData>();
-        //¡¨»Î µƒ∑Ω∑®
+        //ËøûÂÖ• ÁöÑÊñπÊ≥ï
         public void Connect(string ip, int port)
         {
             try
@@ -46,16 +46,22 @@ namespace LessonStep39
         }
 
 
-        //º‡Ã˝  ’»Îµƒ∑Ω∑®
+        //ÁõëÂê¨ Êî∂ÂÖ•ÁöÑÊñπÊ≥ï
 
         private void Receive(object o)
         {
 
             while (true)
             {
-
+                if (!socket.Connected)
+                {
+                    MainThreadClose();
+                    break;
+                }
                 try
                 {
+
+
                     if (socket.Available > 0)
                     {
                         byte[] buffer = new byte[1024 * 4];
@@ -71,7 +77,12 @@ namespace LessonStep39
                                 queueReceive.Enqueue(data);
 
                                 break;
+                            case HandlerCode.Handler_QuitGame:
+                                QuitRoomMsg data1 = new QuitRoomMsg();
+                                data1.DataByByte(buffer, 0);
+                                queueReceive.Enqueue(data1);
 
+                                break;
                             default:
                                 break;
                         }
@@ -84,8 +95,10 @@ namespace LessonStep39
                 }
                 catch (SocketException e)
                 {
+                    MainThreadClose();
 
                     Debug.LogError(e.Message);
+
                 }
 
 
@@ -95,6 +108,7 @@ namespace LessonStep39
         }
         public void ReceiveMsg()
         {
+
             if (queueReceive.Count > 0)
             {
                 var obj = queueReceive.Dequeue();
@@ -104,7 +118,7 @@ namespace LessonStep39
                 {
                     var data = obj as QuitRoomMsg;
 
-                    Debug.Log($" ’µΩ{socket.RemoteEndPoint}œ˚œ¢£∫ÕÊº“µƒ √˚◊÷£∫{data.msg.name},ƒÍ¡‰{data.msg.age}");
+                    Debug.Log($"Êî∂Âà∞{socket.RemoteEndPoint}Ê∂àÊÅØÔºöÁé©ÂÆ∂ÁöÑ ÂêçÂ≠óÔºö{data.msg.name},Âπ¥ÈæÑ{data.msg.age}");
                 }
 
 
@@ -112,7 +126,7 @@ namespace LessonStep39
 
 
         }
-        //∑¢ÀÕ œ˚œ¢µƒ∑Ω∑®
+        //ÂèëÈÄÅ Ê∂àÊÅØÁöÑÊñπÊ≥ï
         public void Send(BaseMsgData md)
         {
             if (socket == null) return;
@@ -124,21 +138,32 @@ namespace LessonStep39
 
             while (true)
             {
-
+                if (!socket.Connected)
+                {
+                    MainThreadClose();
+                    break;
+                }
                 try
                 {
                     if (queueSend.Count > 0)
                     {
-                        Debug.Log("…œ¥´œ˚œ¢£∫");
+                        Debug.Log("‰∏ä‰º†Ê∂àÊÅØÔºö");
                         var data = queueSend.Dequeue();
 
+
                         socket.Send(data.ToByte());
+                        if (data is QuitGameMsg)
+                        {
+                            MainThreadClose();
+                        }
 
                     }
 
                 }
                 catch (SocketException e)
                 {
+                    MainThreadClose();
+
 
                     Debug.LogError(e.Message);
                 }
@@ -149,17 +174,27 @@ namespace LessonStep39
 
         }
 
-        //∑¢ÀÕ œ˚œ¢µƒ∑Ω∑®
+        public void MainThreadClose()
+        {
+            TcpFinishSyc.MainSynchronizationContext.Instance.Post((a) =>
+            {
+                Debug.Log(Thread.CurrentThread.ManagedThreadId + "Á∫øÁ®ãË∞ÉÁî®ÔºÅ");
+                Close();
+            }, null);
+        }
+        //Êñ≠ÂºÄËøûÊé• Âπ∂‰∏î ÂÖ≥Èó≠ socket Â•óÊé•Â≠ó„ÄÇ
 
         public void Close()
         {
             if (socket == null) return;
             try
             {
-
+                Debug.Log("ÂÖ≥Èó≠sokect");
                 socket.Shutdown(SocketShutdown.Both);
+                socket.Disconnect(false);
                 socket.Close();
-                Debug.Log("πÿ±’sokect");
+                socket = null;
+
             }
             catch (SocketException e)
             {
@@ -177,7 +212,9 @@ namespace LessonStep39
         public int age;
         public string name;
     }
-
+    public class QuitGameData : BaseData
+    {
+    }
     public abstract class BaseMsgData : BaseData
     {
         public int id;
@@ -239,26 +276,40 @@ namespace LessonStep39
 
     }
 
+    public class QuitGameMsg : BaseMsgData
+    {
+        public QuitGameData msg;
+        public override int GetID()
+        {
+            return HandlerCode.Handler_QuitGame;
+        }
+
+
+    }
 
 
 
-    public class LessonStep39 : MonoBehaviour
+    public class LessonStep40 : MonoBehaviour
     {
         // Start is called before the first frame update
+        public Button btnClose;
         public Button btnLogin;
         public Button btnSend;
         public InputField ifMsg;
 
         void Start()
         {
+            TcpFinishSyc.MainSynchronizationContext.Instance.Init(Thread.CurrentThread.ManagedThreadId);
+            btnClose.onClick.AddListener(() =>
+            {
 
-            NetMgr39.Ins.socket.Shutdown(SocketShutdown.Both);
-
+                NetMgr40.Ins.Close();
+            });
             btnLogin.onClick.AddListener(() =>
-               {
+            {
 
-                   NetMgr39.Ins.Connect("127.0.0.1", 8088);
-               });
+                NetMgr40.Ins.Connect("127.0.0.1", 8088);
+            });
 
 
 
@@ -268,127 +319,34 @@ namespace LessonStep39
                 if (ifMsg.text.Length > 0)
                 {
 
-
-
-
-
-                    //≤‚ ‘ ∑÷∞¸ ’≥∞¸µƒ∑¢ÀÕ «Èøˆ    
-
-                    //1.¡Ω∏ˆ ’≥∞¸ £®2∏ˆplaydata ˝æ› £©
+                    if (ifMsg.text == "1")
                     {
 
 
-
-                        //QuitRoomData data = new QuitRoomData();
-
-                        //data.age = 12;
-                        //data.name = ifMsg.text;//"’≈Õ˚¿˙¥˙";
-                        //QuitRoomMsg mm = new QuitRoomMsg() { msg = data };
-
-
-                        //QuitRoomData data2 = new QuitRoomData();
-
-                        //data2.age = 88;
-                        //data2.name = ifMsg.text + " copy";//"’≈Õ˚¿˙¥˙";
-                        //QuitRoomMsg cc = new QuitRoomMsg() { msg = data2 };
-
-
-                        //int len = 4 + 4 + mm.GetLen();
-                        //int len2 = 4 + 4 + cc.GetLen();
-                        //byte[] arrTmp = new byte[len + len2];
-
-                        //mm.ToByte().CopyTo(arrTmp, 0);
-
-                        //cc.ToByte().CopyTo(arrTmp, len);
-
-                        //NetMgr39.Ins.socket.Send(arrTmp);
-                        //Debug.Log((len * 2) + "µ„ª˜∑¢ÀÕ¡À œ˚œ¢£° ∑¢ÀÕ¡À ∂‡…Ÿ◊÷Ω⁄£∫");
-                    }
-
-
-                    //2.∑÷∞¸ £® œ»∑¢ “ª–©  playdata ˝æ› £¨‘Ÿ∑¢“ª≤ø∑÷£©
-
-                    {
-
-                        //QuitRoomData data = new QuitRoomData();
-
-                        //data.age = 12;
-                        //data.name = ifMsg.text;//"’≈Õ˚¿˙¥˙";
-                        //QuitRoomMsg mm = new QuitRoomMsg() { msg = data };
-                        //int len = mm.GetLen();
-
-                        //byte[] bytes = mm.ToByte();
-                        ////’‚Ãı–≈œ¢µƒ◊‹≥§∂» 
-
-                        //int firstSendCount = 10;
-                        //byte[] tmp = new byte[firstSendCount];
-
-                        //Array.Copy(bytes, 0, tmp, 0, firstSendCount);
-
-                        //NetMgr39.Ins.socket.Send(tmp);
-                        //Debug.Log(firstSendCount + "œ»∑¢¡À“ª≤ø∑÷£°");
-
-                        //Task.Run(() =>
-                        //{
-                        //    Thread.Sleep(4000);
-
-                        //    byte[] tmp2 = new byte[bytes.Length - firstSendCount];
-                        //    Array.Copy(bytes, firstSendCount, tmp2, 0, bytes.Length - firstSendCount);
-
-                        //    NetMgr39.Ins.socket.Send(tmp2);
-                        //    Debug.Log((bytes.Length - firstSendCount) + "‘Ÿ∑¢¡À“ª≤ø∑÷£°");
-                        //});
+                        NetMgr40.Ins.Send(new QuitGameMsg() { msg = new QuitGameData() });
 
                     }
-
-
-                    //3.’≥∞¸°£ ‘⁄∑÷∞¸°£
-
+                    else
                     {
 
                         QuitRoomData data = new QuitRoomData();
 
-                        data.age = 8;
-                        data.name = ifMsg.text;//"’≈Õ˚¿˙¥˙";
+                        data.age = 12;
+                        data.name = ifMsg.text;//"Âº†ÊúõÂéÜ‰ª£";
                         QuitRoomMsg mm = new QuitRoomMsg() { msg = data };
-
-
-                        QuitRoomData data2 = new QuitRoomData();
-
-                        data2.age = 9;
-                        data2.name = ifMsg.text + " copy";//"’≈Õ˚¿˙¥˙";
-                        QuitRoomMsg cc = new QuitRoomMsg() { msg = data2 };
-
-
-                        int len = 4 + 4 + mm.GetLen();
-                        int len2 = 4 + 4 + cc.GetLen();
-                        byte[] arrTmp = new byte[len + len2];
-
-                        mm.ToByte().CopyTo(arrTmp, 0);
-
-                        cc.ToByte().CopyTo(arrTmp, len);
-
-
-                        int firstSendCount = 10;
-                        var first = new byte[arrTmp.Length / 2 + firstSendCount];
-                        Array.Copy(arrTmp, 0, first, 0, first.Length);
-                        NetMgr39.Ins.socket.Send(first);
-
-                        Debug.Log(first.Length + "œ»∑¢¡À“ª≤ø∑÷£°");
-                        Task.Run(() =>
-                        {
-                            Thread.Sleep(4000);
-
-                            byte[] tmp2 = new byte[arrTmp.Length - arrTmp.Length / 2 - firstSendCount];
-                            Array.Copy(arrTmp, arrTmp.Length / 2 + firstSendCount, tmp2, 0, tmp2.Length);
-
-                            NetMgr39.Ins.socket.Send(tmp2);
-                            Debug.Log(tmp2.Length + "‘Ÿ∑¢¡À“ª≤ø∑÷£°");
-                        });
-
-
-
+                        NetMgr40.Ins.Send(mm);
                     }
+
+
+
+
+
+
+
+
+
+
+
                 }
 
             });
@@ -403,9 +361,9 @@ namespace LessonStep39
         void Update()
         {
 
+            TcpFinishSyc.MainSynchronizationContext.Instance.Update();
 
-
-            NetMgr39.Ins.ReceiveMsg();
+            NetMgr40.Ins.ReceiveMsg();
         }
     }
 

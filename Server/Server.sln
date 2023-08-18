@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestThreadServerClientSocke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSocketHandler", "..\TestSocketHandler\TestSocketHandler.csproj", "{43FE83D8-456F-4236-A8F0-F2F6B5EFD34F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSocketBag", "..\TestSocketBag\TestSocketBag.csproj", "{95EA5548-D815-4C7C-A008-59DDA89B90BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSocketBag", "..\TestSocketBag\TestSocketBag.csproj", "{95EA5548-D815-4C7C-A008-59DDA89B90BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerLessonStep40", "..\ServerLessonStep40\ServerLessonStep40.csproj", "{C86B797A-D42B-44E6-9DE0-730A743ECDA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerTcpFinishSyc", "..\ServerTcpFinishSyc\ServerTcpFinishSyc.csproj", "{335A5762-1897-4BB7-A389-007603A4861D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepRealy32Asyc", "..\StepRealy32Asyc\StepRealy32Asyc.csproj", "{1C249114-0277-4A32-B276-CE86777E79C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{95EA5548-D815-4C7C-A008-59DDA89B90BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95EA5548-D815-4C7C-A008-59DDA89B90BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95EA5548-D815-4C7C-A008-59DDA89B90BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86B797A-D42B-44E6-9DE0-730A743ECDA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86B797A-D42B-44E6-9DE0-730A743ECDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86B797A-D42B-44E6-9DE0-730A743ECDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86B797A-D42B-44E6-9DE0-730A743ECDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335A5762-1897-4BB7-A389-007603A4861D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335A5762-1897-4BB7-A389-007603A4861D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335A5762-1897-4BB7-A389-007603A4861D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335A5762-1897-4BB7-A389-007603A4861D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C249114-0277-4A32-B276-CE86777E79C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C249114-0277-4A32-B276-CE86777E79C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C249114-0277-4A32-B276-CE86777E79C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C249114-0277-4A32-B276-CE86777E79C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
