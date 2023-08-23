@@ -7,16 +7,24 @@ using System.Text;
 using UnityEngine;
 
 
-//begin end 的socket连接
-public class StepRealy32Asyc : MonoBehaviour
+//SocketAsyncEventArgs  连接  替换 begin  end  socket 的连入 。
+public class StepRealy32Asyc2 : MonoBehaviour
 {
     // Start is called before the first frame update
     Socket socket;
     byte[] arrReceive = new byte[1024];
+
     void Start()
     {
         socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        Debug.Log("开始连入！" + socket.Connected);
+
+        //socket.ConnectAsync(new SocketAsyncEventArgs()
+        //{
+          
+
+        //});
+        
+
         socket.BeginConnect(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8088), (result) =>
         {
             Debug.Log("222连入成功！" + socket.Connected);
@@ -27,7 +35,7 @@ public class StepRealy32Asyc : MonoBehaviour
 
 
         }, null);
-     
+
     }
 
     void AsyncRecevie(IAsyncResult reslut)
