@@ -437,7 +437,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 731265864}
-  - component: {fileID: 731265861}
   - component: {fileID: 731265862}
   m_Layer: 0
   m_Name: Scrpt
@@ -446,23 +445,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &731265861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731265860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3909ca7eb535ec24b98f1f70d5c2d878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btnClose: {fileID: 2017798430}
-  btnLogin: {fileID: 4936524}
-  btnSend: {fileID: 1743479376}
-  ifMsg: {fileID: 1622855256}
-  HeartClock: 2
 --- !u!114 &731265862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,10 +457,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd686b3f71c3164ab4ed2f1663b21d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnClose: {fileID: 0}
-  btnLogin: {fileID: 0}
-  btnSend: {fileID: 0}
-  ifMsg: {fileID: 0}
+  btnClose: {fileID: 2017798430}
+  btnLogin: {fileID: 4936524}
+  btnSend: {fileID: 1743479376}
+  ifMsg: {fileID: 1622855256}
   HeartClock: 2
 --- !u!4 &731265864
 Transform:

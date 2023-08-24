@@ -2,12 +2,10 @@
 {
     class Program
     {
- 
+
         static void Main(string[] args)
         {
 
-            //启动同步
-            MainSynchronizationContext.Instance.Init(Thread.CurrentThread.ManagedThreadId);
 
             ServerSocket server = new ServerSocket();
             server.Start("127.0.0.1", 8088, 100);
@@ -39,6 +37,7 @@
                         server.Broadcast(data);
 
                     }
+                  
 
                 }
 
@@ -46,9 +45,7 @@
             Console.WriteLine("启动服务器！");
             while (true)
             {
-                MainSynchronizationContext.Instance.Update();
-                if (!server.IsConnect)
-                    break;
+
             }
 
 

@@ -35,8 +35,9 @@ namespace ServerTcpFinishAsync
                 isLanuch = true;
 
 
-                Task.Run(Accept);
-                Task.Run(Receive);
+                socket.BeginAccept(Accept, socket);
+
+                Task.Run(CheckHeartMsg);
             }
             catch (SocketException se)
             {
@@ -44,44 +45,45 @@ namespace ServerTcpFinishAsync
             }
         }
 
-        public void Accept()
+        public void Accept(IAsyncResult ar)
         {
-
-            socket.BeginAccept(async (IAsyncResult ar) =>
-            {
-                //await ar.AsyncWaitHandle;
-
-
-            }, null);
-
             try
             {
-                while (isLanuch)
+                Socket server = ar.AsyncState as Socket;
+                if (server == null)
                 {
-                    var sotTmp = socket.Accept();
-                    if (sotTmp != null)
-                    {
+                    Close();
+                    return;
+                }
+                if (isLanuch)
+                {
 
-                        Console.WriteLine($"当前的线程id:{Thread.CurrentThread.ManagedThreadId},连入：{sotTmp.RemoteEndPoint}");
-                        var tmp = new ClientSocket(sotTmp);
+                    var clientSkt = server.EndAccept(ar);
+                    if (clientSkt != null)
+                    {
+                        var tmp = new ClientSocket(clientSkt);
+                        tmp.StartReceive();
                         lock (dicClientSocket)
                         {
                             dicClientSocket.Add(tmp.id, tmp);
                         }
-
-
-
+                        Console.WriteLine($"连入：{clientSkt.RemoteEndPoint}");
                     }
-
                 }
+                server.BeginAccept(Accept, server);
 
             }
             catch (SocketException se)
             {
+
                 Console.WriteLine($"错误{se.ErrorCode}：{se.Message}");
+
             }
+
+
         }
-        public void Receive()
+
+        public void CheckHeartMsg()
         {
 
             try
@@ -89,15 +91,16 @@ namespace ServerTcpFinishAsync
 
                 while (isLanuch)
                 {
+                    if (socket == null)
+                        break;
 
                     lock (dicClientSocket)
                     {
-                        long curTime = DateTime.Now.Ticks / TimeSpan.TicksPerSecond;
 
+                        long curTime = DateTime.Now.Ticks / TimeSpan.TicksPerSecond;
 
                         foreach (var item in dicClientSocket)
                         {
-                            item.Value?.Receive();
                             //检测 心跳 
                             item.Value?.CheckHeartMsg(curTime);
                         }
@@ -111,7 +114,10 @@ namespace ServerTcpFinishAsync
                             }
                             waitRemoveClientSocket.Clear();
                         }
+
+
                     }
+
 
 
 
@@ -137,13 +143,12 @@ namespace ServerTcpFinishAsync
                 {
                     lock (dicClientSocket)
                     {
-
                         foreach (var item in dicClientSocket)
                         {
                             item.Value?.Send(md);
                         }
-                    }
 
+                    }
 
                 }
 
@@ -155,15 +160,14 @@ namespace ServerTcpFinishAsync
         }
         public void Close()
         {
-            lock (dicClientSocket)
+
+            isLanuch = false;
+            foreach (var item in dicClientSocket)
             {
-                isLanuch = false;
-                foreach (var item in dicClientSocket)
-                {
-                    item.Value.Close();
-                }
-                dicClientSocket.Clear();
+                item.Value.Close();
             }
+            dicClientSocket.Clear();
+
 
         }
 

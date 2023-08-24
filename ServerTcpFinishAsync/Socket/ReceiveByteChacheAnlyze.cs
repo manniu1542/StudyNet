@@ -6,21 +6,13 @@
         public Queue<BaseMsgData> queueFinish = new Queue<BaseMsgData>();
 
 
-        byte[] arrChache = new byte[ClientSocket.preCount * 10];
+        byte[] arrChache = new byte[ClientSocket.preCount * 3];
 
         int chacheNum;
         int curIdx;
 
 
 
-        public byte[] GetNewByteSlice(ref byte[] arr, int startIdx = 0, int count = 0)
-        {
-            byte[] arrT = new byte[count];
-
-            Array.Copy(arr, startIdx, arrT, 0, count);
-
-            return arrT;
-        }
 
         //1.查看 分包，粘包的情况。 （先查看缓存中的  然后 结合本次 接受的容器，比较 长度）
         //3.把完整的包 取出，不完整的 留到缓存中 

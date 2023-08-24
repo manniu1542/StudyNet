@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using UnityEditor;
 using UnityEngine;
 
 namespace StepTcpFinishAsync
@@ -13,10 +14,12 @@ namespace StepTcpFinishAsync
 
         public static readonly NetManagerTcpAsync Ins = new NetManagerTcpAsync();
         public Socket socket;
+        ReceiveByteChacheAnlyze rbca = new ReceiveByteChacheAnlyze();
         public Queue<BaseMsgData> queueSend = new Queue<BaseMsgData>();
         public Queue<BaseMsgData> queueReceive = new Queue<BaseMsgData>();
         public bool IsConnect => socket != null && socket.Connected;
-        byte[] bufferChache = new byte[1024 * 4];
+        public const int preCount = 1024 * 1024;
+        byte[] bufferChache = new byte[preCount];
 
         SocketAsyncEventArgs sendArgs;
         bool isSendContinue;
@@ -87,27 +90,18 @@ namespace StepTcpFinishAsync
 
 
                 if (funArgs.BytesTransferred <= 0) return;
-                int handlerType = BitConverter.ToInt32(funArgs.Buffer, 4);
+                rbca.Analyzi(funArgs.Buffer, funArgs.BytesTransferred);
 
-                switch (handlerType)
+
+                //取出完整的队列
+                int len = rbca.queueFinish.Count;
+
+                for (int i = 0; i < len; i++)
                 {
-                    case HandlerCode.Handler_EnterRoom:
-                        PlayerDataMsg data = new PlayerDataMsg();
-                        data.DataByByte(funArgs.Buffer);
-                        queueReceive.Enqueue(data);
+                    var obj = rbca.queueFinish.Dequeue();
 
-                        break;
-                    case HandlerCode.Handler_QuitGame:
-                        QuitRoomMsg data1 = new QuitRoomMsg();
-                        data1.DataByByte(funArgs.Buffer);
-                        queueReceive.Enqueue(data1);
+                    queueReceive.Enqueue(obj);
 
-                        break;
-
-
-                    default:
-                        Debug.LogError("没有找到消息id：" + handlerType);
-                        break;
                 }
 
                 socket.ReceiveAsync(args);

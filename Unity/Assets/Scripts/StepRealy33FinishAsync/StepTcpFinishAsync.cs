@@ -16,6 +16,8 @@ namespace StepTcpFinishAsync
 
         void Start()
         {
+        
+
 
             btnClose.onClick.AddListener(() =>
             {
