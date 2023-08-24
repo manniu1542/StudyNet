@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "StepRealy33Async/1.0.0": {
+        "runtime": {
+          "StepRealy33Async.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StepRealy33Async/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

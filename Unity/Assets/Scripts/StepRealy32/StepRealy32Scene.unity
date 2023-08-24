@@ -226,6 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731265864}
   - component: {fileID: 731265861}
+  - component: {fileID: 731265862}
   m_Layer: 0
   m_Name: Scrpt
   m_TagString: Untagged
@@ -240,9 +241,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731265860}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 366a4fa1b4bc6a34990f42efdb39400e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &731265862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731265860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245e6f64f1c315439ac46246d74f22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &731265864

@@ -1,0 +1,15 @@
+E:\UnityProgram\StudyNet\StepRealy33Async\bin\Debug\net6.0\StepRealy33Async.exe
+E:\UnityProgram\StudyNet\StepRealy33Async\bin\Debug\net6.0\StepRealy33Async.deps.json
+E:\UnityProgram\StudyNet\StepRealy33Async\bin\Debug\net6.0\StepRealy33Async.runtimeconfig.json
+E:\UnityProgram\StudyNet\StepRealy33Async\bin\Debug\net6.0\StepRealy33Async.dll
+E:\UnityProgram\StudyNet\StepRealy33Async\bin\Debug\net6.0\StepRealy33Async.pdb
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\StepRealy33Async.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\StepRealy33Async.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\StepRealy33Async.AssemblyInfoInputs.cache
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\StepRealy33Async.AssemblyInfo.cs
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\StepRealy33Async.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\StepRealy33Async.dll
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\refint\StepRealy33Async.dll
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\StepRealy33Async.pdb
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\StepRealy33Async.genruntimeconfig.cache
+E:\UnityProgram\StudyNet\StepRealy33Async\obj\Debug\net6.0\ref\StepRealy33Async.dll

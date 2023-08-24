@@ -18,33 +18,60 @@ public class StepRealy32Asyc2 : MonoBehaviour
     {
         socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-        //socket.ConnectAsync(new SocketAsyncEventArgs()
-        //{
-          
-
-        //});
-        
-
-        socket.BeginConnect(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8088), (result) =>
+        var s = new SocketAsyncEventArgs();
+        s.Completed += (_socket, args) =>
         {
-            Debug.Log("222连入成功！" + socket.Connected);
-            socket.EndConnect(result);
-            Debug.Log("连入成功！" + socket.Connected);
+            if (args.SocketError == SocketError.Success)
+            {
+                Debug.Log("成功连入：");
+                var soc = _socket as Socket;
 
-            socket.BeginReceive(arrReceive, 0, arrReceive.Length, SocketFlags.None, AsyncRecevie, socket);
+
+                AsyncRecevie(soc);
 
 
-        }, null);
+            }
+            else
+            {
+                Debug.LogError("连入失败！" + args.SocketError);
+            }
+
+        };
+
+        s.RemoteEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8088);
+        socket.ConnectAsync(s);
+
+
+
 
     }
 
-    void AsyncRecevie(IAsyncResult reslut)
+    void AsyncRecevie(Socket s)
     {
-        Socket s = reslut.AsyncState as Socket;
-        var receiveNum = s.EndSend(reslut);
-        string str = Encoding.UTF8.GetString(arrReceive, 0, receiveNum);
-        Debug.Log("收到消息：" + str);
-        s.BeginReceive(arrReceive, 0, arrReceive.Length, SocketFlags.None, AsyncRecevie, s);
+
+        var args = new SocketAsyncEventArgs();
+        args.SetBuffer(arrReceive, 0, arrReceive.Length);
+        args.Completed += (_socket, _args) =>
+        {
+            if (_args.SocketError == SocketError.Success)
+            {
+
+                var soc = _socket as Socket;
+
+
+                string str = Encoding.UTF8.GetString(_args.Buffer, 0, _args.BytesTransferred);
+
+                Debug.Log("收到消息：" + str);
+                soc.ReceiveAsync(args);
+            }
+            else
+            {
+                Debug.LogError("收到消息失败！" + _args.SocketError);
+            }
+
+        };
+
+        s.ReceiveAsync(args);
 
     }
     // Update is called once per frame
@@ -54,11 +81,25 @@ public class StepRealy32Asyc2 : MonoBehaviour
         {
             string str = "hello Async";
             byte[] tmp = Encoding.UTF8.GetBytes(str);
-            socket.BeginSend(tmp, 0, tmp.Length, SocketFlags.None, (result) =>
+
+            var args = new SocketAsyncEventArgs();
+            args.SetBuffer(tmp, 0, tmp.Length);
+            args.Completed += (_socket, _args) =>
             {
-                socket.EndSend(result);
-                Debug.Log("发送完成！" + str);
-            }, null);
+                if (_args.SocketError == SocketError.Success)
+                {
+
+                    Debug.Log("发送消息完成：" + str);
+
+                }
+                else
+                {
+                    Debug.LogError("发送消息失败！" + _args.SocketError);
+                }
+
+            };
+            socket.SendAsync(args);
+
         }
 
     }
