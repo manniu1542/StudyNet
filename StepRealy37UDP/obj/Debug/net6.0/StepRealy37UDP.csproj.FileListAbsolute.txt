@@ -1,0 +1,15 @@
+F:\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP.exe
+F:\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP.deps.json
+F:\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP.runtimeconfig.json
+F:\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP.dll
+F:\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP.pdb
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP.csproj.AssemblyReference.cache
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP.GeneratedMSBuildEditorConfig.editorconfig
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP.AssemblyInfoInputs.cache
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP.AssemblyInfo.cs
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP.csproj.CoreCompileInputs.cache
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP.dll
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\refint\StepRealy37UDP.dll
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP.pdb
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP.genruntimeconfig.cache
+F:\StudyNet\StepRealy37UDP\obj\Debug\net6.0\ref\StepRealy37UDP.dll

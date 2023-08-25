@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepRealy32Asyc", "..\StepR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepRealy33Async", "..\StepRealy33Async\StepRealy33Async.csproj", "{D72995D3-5224-48E8-A94A-F1B8D0BDC60B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerTcpFinishAsync", "..\ServerTcpFinishAsync\ServerTcpFinishAsync.csproj", "{75BDF3AF-95B8-4C23-99B3-CD7B116FCBAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerTcpFinishAsync", "..\ServerTcpFinishAsync\ServerTcpFinishAsync.csproj", "{75BDF3AF-95B8-4C23-99B3-CD7B116FCBAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepRealy37UDP", "..\StepRealy37UDP\StepRealy37UDP.csproj", "{0FB828DF-7828-48C0-A15F-5FA51FBE1DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepUdpFinishSync", "..\StepUdpFinishSync\StepUdpFinishSync.csproj", "{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{75BDF3AF-95B8-4C23-99B3-CD7B116FCBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75BDF3AF-95B8-4C23-99B3-CD7B116FCBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75BDF3AF-95B8-4C23-99B3-CD7B116FCBAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FB828DF-7828-48C0-A15F-5FA51FBE1DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB828DF-7828-48C0-A15F-5FA51FBE1DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB828DF-7828-48C0-A15F-5FA51FBE1DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB828DF-7828-48C0-A15F-5FA51FBE1DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
