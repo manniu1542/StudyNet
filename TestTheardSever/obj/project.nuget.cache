@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IGauVLy16+iazH9wyQwdz+nq1LHWy3bCMDTsq6lRGFS+vuVYUhsSEmjwNySAwlKahrq0wXv3WF6j/9ySd1fwEA==",
+  "dgSpecHash": "ZEAssrFz1z7e5i3wnIeqkUmKrgxhmzqjIhVt0Io1v8X8ChMw+zc00ZqBsESdGqsZt5MobnsYyC+LWVP957YGJQ==",
   "success": true,
-  "projectFilePath": "F:\\StudyNet\\TestTheardSever\\TestTheardSever.csproj",
+  "projectFilePath": "F:\\StudyNet\\TestTheardSever\\TestTheardSever_Tcp34简单服务器收发str.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

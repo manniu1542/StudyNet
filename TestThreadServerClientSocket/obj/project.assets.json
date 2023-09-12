@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\StudyNet\\TestThreadServerClientSocket\\TestThreadServerClientSocket.csproj",
-      "projectName": "TestThreadServerClientSocket",
-      "projectPath": "F:\\StudyNet\\TestThreadServerClientSocket\\TestThreadServerClientSocket.csproj",
+      "projectUniqueName": "F:\\StudyNet\\TestThreadServerClientSocket\\TestThreadServerClientSocket_Tcp35服务器管理类.csproj",
+      "projectName": "TestThreadServerClientSocket_Tcp35服务器管理类",
+      "projectPath": "F:\\StudyNet\\TestThreadServerClientSocket\\TestThreadServerClientSocket_Tcp35服务器管理类.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "F:\\StudyNet\\TestThreadServerClientSocket\\obj\\",
       "projectStyle": "PackageReference",
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\StudyNet\\TestTheardSever\\TestTheardSever.csproj",
-      "projectName": "TestTheardSever",
-      "projectPath": "F:\\StudyNet\\TestTheardSever\\TestTheardSever.csproj",
+      "projectUniqueName": "F:\\StudyNet\\TestTheardSever\\TestTheardSever_Tcp34简单服务器收发str.csproj",
+      "projectName": "TestTheardSever_Tcp34简单服务器收发str",
+      "projectPath": "F:\\StudyNet\\TestTheardSever\\TestTheardSever_Tcp34简单服务器收发str.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "F:\\StudyNet\\TestTheardSever\\obj\\",
       "projectStyle": "PackageReference",
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

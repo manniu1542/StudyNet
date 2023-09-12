@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rj9NP01D35EqK9zHV03DLiC5QfeAYg9FJBitPAHoHpvFhRssUkmCDDr6QXRsjNLuMQHnDWdMkcNBedwVChzQuA==",
+  "dgSpecHash": "dlPbkE5MYjnyocDpJxrz91yFTugY1pAnlL2eqe6k7NzOIIUrKmkNPxCM01H+fvmt0tg2NolRxKqzjQqFqIQvKA==",
   "success": true,
-  "projectFilePath": "F:\\StudyNet\\TestSocketBag\\TestSocketBag.csproj",
+  "projectFilePath": "F:\\StudyNet\\TestSocketBag\\TestSocketBag_Tcp39分包粘包问题.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

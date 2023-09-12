@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\StudyNet\\ServerLessonStep40\\ServerLessonStep40.csproj",
-      "projectName": "ServerLessonStep40",
-      "projectPath": "F:\\StudyNet\\ServerLessonStep40\\ServerLessonStep40.csproj",
+      "projectUniqueName": "F:\\StudyNet\\ServerLessonStep40\\ServerLessonStep40_Tcp配合客户端管理类.csproj",
+      "projectName": "ServerLessonStep40_Tcp配合客户端管理类",
+      "projectPath": "F:\\StudyNet\\ServerLessonStep40\\ServerLessonStep40_Tcp配合客户端管理类.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "F:\\StudyNet\\ServerLessonStep40\\obj\\",
       "projectStyle": "PackageReference",
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

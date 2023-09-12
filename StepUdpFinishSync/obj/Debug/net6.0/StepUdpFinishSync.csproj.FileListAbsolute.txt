@@ -1,0 +1,15 @@
+F:\StudyNet\StepUdpFinishSync\bin\Debug\net6.0\StepUdpFinishSync.exe
+F:\StudyNet\StepUdpFinishSync\bin\Debug\net6.0\StepUdpFinishSync.deps.json
+F:\StudyNet\StepUdpFinishSync\bin\Debug\net6.0\StepUdpFinishSync.runtimeconfig.json
+F:\StudyNet\StepUdpFinishSync\bin\Debug\net6.0\StepUdpFinishSync.dll
+F:\StudyNet\StepUdpFinishSync\bin\Debug\net6.0\StepUdpFinishSync.pdb
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\StepUdpFinishSync.csproj.AssemblyReference.cache
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\StepUdpFinishSync.GeneratedMSBuildEditorConfig.editorconfig
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\StepUdpFinishSync.AssemblyInfoInputs.cache
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\StepUdpFinishSync.AssemblyInfo.cs
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\StepUdpFinishSync.csproj.CoreCompileInputs.cache
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\StepUdpFinishSync.dll
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\refint\StepUdpFinishSync.dll
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\StepUdpFinishSync.pdb
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\StepUdpFinishSync.genruntimeconfig.cache
+F:\StudyNet\StepUdpFinishSync\obj\Debug\net6.0\ref\StepUdpFinishSync.dll

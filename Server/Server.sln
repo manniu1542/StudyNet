@@ -3,29 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server.csproj", "{95565E4D-87BE-446B-8492-186D895ACACA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server_Tcp33简单服务器", "Server_Tcp33简单服务器.csproj", "{95565E4D-87BE-446B-8492-186D895ACACA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTheardSever", "..\TestTheardSever\TestTheardSever.csproj", "{B6F98BFD-E3B6-4987-AF2F-31132E7FD2FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTheardSever_Tcp34简单服务器收发str", "..\TestTheardSever\TestTheardSever_Tcp34简单服务器收发str.csproj", "{B6F98BFD-E3B6-4987-AF2F-31132E7FD2FA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestThreadServerClientSocket", "..\TestThreadServerClientSocket\TestThreadServerClientSocket.csproj", "{2F856247-FB22-4655-9758-B21C6A199435}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestThreadServerClientSocket_Tcp35服务器管理类", "..\TestThreadServerClientSocket\TestThreadServerClientSocket_Tcp35服务器管理类.csproj", "{2F856247-FB22-4655-9758-B21C6A199435}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSocketHandler", "..\TestSocketHandler\TestSocketHandler.csproj", "{43FE83D8-456F-4236-A8F0-F2F6B5EFD34F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSocketHandler_Tcp38区分消息类型", "..\TestSocketHandler\TestSocketHandler_Tcp38区分消息类型.csproj", "{43FE83D8-456F-4236-A8F0-F2F6B5EFD34F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSocketBag", "..\TestSocketBag\TestSocketBag.csproj", "{95EA5548-D815-4C7C-A008-59DDA89B90BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSocketBag_Tcp39分包粘包问题", "..\TestSocketBag\TestSocketBag_Tcp39分包粘包问题.csproj", "{95EA5548-D815-4C7C-A008-59DDA89B90BA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerLessonStep40", "..\ServerLessonStep40\ServerLessonStep40.csproj", "{C86B797A-D42B-44E6-9DE0-730A743ECDA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerLessonStep40_Tcp配合客户端管理类", "..\ServerLessonStep40\ServerLessonStep40_Tcp配合客户端管理类.csproj", "{C86B797A-D42B-44E6-9DE0-730A743ECDA2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerTcpFinishSyc", "..\ServerTcpFinishSyc\ServerTcpFinishSyc.csproj", "{335A5762-1897-4BB7-A389-007603A4861D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepRealy32Asyc", "..\StepRealy32Asyc\StepRealy32Asyc.csproj", "{1C249114-0277-4A32-B276-CE86777E79C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepRealy32Asyc_Tcp异步测试BeginEnd", "..\StepRealy32Asyc\StepRealy32Asyc_Tcp异步测试BeginEnd.csproj", "{1C249114-0277-4A32-B276-CE86777E79C8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepRealy33Async", "..\StepRealy33Async\StepRealy33Async.csproj", "{D72995D3-5224-48E8-A94A-F1B8D0BDC60B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepRealy33Async_Tcp异步测试异步参数", "..\StepRealy33Async\StepRealy33Async_Tcp异步测试异步参数.csproj", "{D72995D3-5224-48E8-A94A-F1B8D0BDC60B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerTcpFinishAsync", "..\ServerTcpFinishAsync\ServerTcpFinishAsync.csproj", "{75BDF3AF-95B8-4C23-99B3-CD7B116FCBAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepRealy37UDP", "..\StepRealy37UDP\StepRealy37UDP.csproj", "{0FB828DF-7828-48C0-A15F-5FA51FBE1DCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepRealy37UDP简单连接", "..\StepRealy37UDP\StepRealy37UDP简单连接.csproj", "{0FB828DF-7828-48C0-A15F-5FA51FBE1DCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepUdpFinishSync", "..\StepUdpFinishSync\StepUdpFinishSync.csproj", "{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepUdpFinishSync", "..\StepUdpFinishSync\StepUdpFinishSync.csproj", "{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

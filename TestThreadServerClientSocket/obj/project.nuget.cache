@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t6h+iG8NtUNXBfGBf9V7rvS2We9t6CaKbh851pwkjxofiqQzON4Cl/LdnxR4c4rp/NbnY4sxSZcGj4U9cngxbw==",
+  "dgSpecHash": "/X6WTJKLNL/Ehw2TyAY86ljfCYGkpdWW1+EMk4gBTkHjPrVn53IL++/grOirGCTkvx5CX0AoYPIOWyqI0/UpDg==",
   "success": true,
-  "projectFilePath": "F:\\StudyNet\\TestThreadServerClientSocket\\TestThreadServerClientSocket.csproj",
+  "projectFilePath": "F:\\StudyNet\\TestThreadServerClientSocket\\TestThreadServerClientSocket_Tcp35服务器管理类.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

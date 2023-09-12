@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u04FE+edk13cNcuDh/5J3aXy+NBdMS3DCfkyYrlgfu/gSZn1FzaBkVxkj3j/M4DVnhfvaeHMRur37VZHqS6hyQ==",
+  "dgSpecHash": "NcTSbQQorxKhcYNvbFBXaAdBjXoj4zr9mgQbBqv51MmBlRW0UBaDXgz7fyzQU6kLHBUNrBUr47svpkG0ZqQ1AA==",
   "success": true,
-  "projectFilePath": "F:\\StudyNet\\ServerLessonStep40\\ServerLessonStep40.csproj",
+  "projectFilePath": "F:\\StudyNet\\ServerLessonStep40\\ServerLessonStep40_Tcp配合客户端管理类.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

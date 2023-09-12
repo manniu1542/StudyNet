@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qUCc9xaCGTDMnWOReYgUdImTowbso0oyQnhQFXG+VyTz3gdjIlZ0xrEBFDCj/nD5LJWdgW4m1qGBANnBLqM1Bg==",
+  "dgSpecHash": "8kcFV87JaJ8lSwewhQoOyPp2y14nbtex46gsnDmitlfIONXhKxX3DLPNREnLlrOENa8DtjDA5EC8d6hbHY6riA==",
   "success": true,
-  "projectFilePath": "F:\\StudyNet\\TestSocketHandler\\TestSocketHandler.csproj",
+  "projectFilePath": "F:\\StudyNet\\TestSocketHandler\\TestSocketHandler_Tcp38区分消息类型.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

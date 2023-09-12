@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\StudyNet\\TestSocketBag\\TestSocketBag.csproj",
-      "projectName": "TestSocketBag",
-      "projectPath": "F:\\StudyNet\\TestSocketBag\\TestSocketBag.csproj",
+      "projectUniqueName": "F:\\StudyNet\\TestSocketBag\\TestSocketBag_Tcp39分包粘包问题.csproj",
+      "projectName": "TestSocketBag_Tcp39分包粘包问题",
+      "projectPath": "F:\\StudyNet\\TestSocketBag\\TestSocketBag_Tcp39分包粘包问题.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "F:\\StudyNet\\TestSocketBag\\obj\\",
       "projectStyle": "PackageReference",
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\StudyNet\\TestSocketHandler\\TestSocketHandler.csproj",
-      "projectName": "TestSocketHandler",
-      "projectPath": "F:\\StudyNet\\TestSocketHandler\\TestSocketHandler.csproj",
+      "projectUniqueName": "F:\\StudyNet\\TestSocketHandler\\TestSocketHandler_Tcp38区分消息类型.csproj",
+      "projectName": "TestSocketHandler_Tcp38区分消息类型",
+      "projectPath": "F:\\StudyNet\\TestSocketHandler\\TestSocketHandler_Tcp38区分消息类型.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "F:\\StudyNet\\TestSocketHandler\\obj\\",
       "projectStyle": "PackageReference",
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

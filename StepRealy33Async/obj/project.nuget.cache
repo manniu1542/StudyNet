@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bfvrpbFHtHAurJZ8VAn87aykhQJwp8ROgat7zCNqmzbJYFxtI6mr1+6+J/xITNRSFWi/Af6V58HA7S5IM1bFNQ==",
+  "dgSpecHash": "jMhM7LQj9SWvf1h2rw3I1NqybljJdo7IWwsIBlofwb0rKpDqQp7qpydOWfkee9luqKE4K3IK5xBDzp3VJUcuzQ==",
   "success": true,
-  "projectFilePath": "F:\\StudyNet\\StepRealy33Async\\StepRealy33Async.csproj",
+  "projectFilePath": "F:\\StudyNet\\StepRealy33Async\\StepRealy33Async_Tcp异步测试异步参数.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

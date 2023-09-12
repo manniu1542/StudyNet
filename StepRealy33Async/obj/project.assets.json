@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\StudyNet\\StepRealy33Async\\StepRealy33Async.csproj",
-      "projectName": "StepRealy33Async",
-      "projectPath": "F:\\StudyNet\\StepRealy33Async\\StepRealy33Async.csproj",
+      "projectUniqueName": "F:\\StudyNet\\StepRealy33Async\\StepRealy33Async_Tcp异步测试异步参数.csproj",
+      "projectName": "StepRealy33Async_Tcp异步测试异步参数",
+      "projectPath": "F:\\StudyNet\\StepRealy33Async\\StepRealy33Async_Tcp异步测试异步参数.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "F:\\StudyNet\\StepRealy33Async\\obj\\",
       "projectStyle": "PackageReference",
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

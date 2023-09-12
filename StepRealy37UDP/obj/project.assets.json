@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\StudyNet\\StepRealy37UDP\\StepRealy37UDP.csproj",
-      "projectName": "StepRealy37UDP",
-      "projectPath": "F:\\StudyNet\\StepRealy37UDP\\StepRealy37UDP.csproj",
+      "projectUniqueName": "F:\\StudyNet\\StepRealy37UDP\\StepRealy37UDP简单连接.csproj",
+      "projectName": "StepRealy37UDP简单连接",
+      "projectPath": "F:\\StudyNet\\StepRealy37UDP\\StepRealy37UDP简单连接.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "F:\\StudyNet\\StepRealy37UDP\\obj\\",
       "projectStyle": "PackageReference",
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

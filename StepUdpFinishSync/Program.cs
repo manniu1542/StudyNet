@@ -13,8 +13,8 @@ namespace StepUdpFinishSync
         static void Main(string[] args)
         {
             int udpLimteByteNum = 512;
-            Socket socketUdp = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Udp);
-            socketUdp.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8089));
+            Socket socketUdp = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            socketUdp.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8088));
 
             Console.WriteLine($"启动简易udp服务端");
 
