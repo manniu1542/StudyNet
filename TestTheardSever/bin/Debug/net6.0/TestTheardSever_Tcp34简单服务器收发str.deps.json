@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TestTheardSever_Tcp34简单服务器收发str/1.0.0": {
+        "runtime": {
+          "TestTheardSever_Tcp34简单服务器收发str.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestTheardSever_Tcp34简单服务器收发str/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

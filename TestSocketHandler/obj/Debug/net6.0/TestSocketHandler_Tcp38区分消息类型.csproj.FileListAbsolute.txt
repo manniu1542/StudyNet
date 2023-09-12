@@ -1,0 +1,15 @@
+E:\UnityProgram\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.exe
+E:\UnityProgram\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.deps.json
+E:\UnityProgram\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.runtimeconfig.json
+E:\UnityProgram\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.dll
+E:\UnityProgram\StudyNet\TestSocketHandler\bin\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.pdb
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.AssemblyInfoInputs.cache
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.AssemblyInfo.cs
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.dll
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\refint\TestSocketHandler_Tcp38区分消息类型.dll
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.pdb
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\TestSocketHandler_Tcp38区分消息类型.genruntimeconfig.cache
+E:\UnityProgram\StudyNet\TestSocketHandler\obj\Debug\net6.0\ref\TestSocketHandler_Tcp38区分消息类型.dll

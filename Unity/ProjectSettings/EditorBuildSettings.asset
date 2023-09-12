@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scripts/Step42TcpFinishSyc/Step42.unity
-    guid: cffef0a8bd39cd14194914c64d17450d
+    path: Assets/Scripts/StepUdpFinishSync/StepUdpFinishSync.unity
+    guid: 883276df443c058489410f8a3e2dc0d7
   m_configObjects: {}

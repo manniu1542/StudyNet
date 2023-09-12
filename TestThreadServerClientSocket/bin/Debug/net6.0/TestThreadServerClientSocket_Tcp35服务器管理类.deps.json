@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TestThreadServerClientSocket_Tcp35服务器管理类/1.0.0": {
+        "runtime": {
+          "TestThreadServerClientSocket_Tcp35服务器管理类.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestThreadServerClientSocket_Tcp35服务器管理类/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

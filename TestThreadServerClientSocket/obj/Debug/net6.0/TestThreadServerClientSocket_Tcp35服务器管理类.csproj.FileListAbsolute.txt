@@ -1,0 +1,15 @@
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\bin\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.exe
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\bin\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.deps.json
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\bin\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.runtimeconfig.json
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\bin\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.dll
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\bin\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.pdb
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.AssemblyInfoInputs.cache
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.AssemblyInfo.cs
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.dll
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\refint\TestThreadServerClientSocket_Tcp35服务器管理类.dll
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.pdb
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\TestThreadServerClientSocket_Tcp35服务器管理类.genruntimeconfig.cache
+E:\UnityProgram\StudyNet\TestThreadServerClientSocket\obj\Debug\net6.0\ref\TestThreadServerClientSocket_Tcp35服务器管理类.dll

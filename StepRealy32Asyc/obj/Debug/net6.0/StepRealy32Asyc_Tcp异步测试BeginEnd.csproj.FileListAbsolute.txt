@@ -1,0 +1,15 @@
+E:\UnityProgram\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.exe
+E:\UnityProgram\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.deps.json
+E:\UnityProgram\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.runtimeconfig.json
+E:\UnityProgram\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.dll
+E:\UnityProgram\StudyNet\StepRealy32Asyc\bin\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.pdb
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.AssemblyInfoInputs.cache
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.AssemblyInfo.cs
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.dll
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\refint\StepRealy32Asyc_Tcp异步测试BeginEnd.dll
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.pdb
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\StepRealy32Asyc_Tcp异步测试BeginEnd.genruntimeconfig.cache
+E:\UnityProgram\StudyNet\StepRealy32Asyc\obj\Debug\net6.0\ref\StepRealy32Asyc_Tcp异步测试BeginEnd.dll

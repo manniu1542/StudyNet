@@ -1,0 +1,15 @@
+E:\UnityProgram\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.exe
+E:\UnityProgram\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.deps.json
+E:\UnityProgram\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.runtimeconfig.json
+E:\UnityProgram\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.dll
+E:\UnityProgram\StudyNet\ServerLessonStep40\bin\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.pdb
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.AssemblyInfoInputs.cache
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.AssemblyInfo.cs
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.dll
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\refint\ServerLessonStep40_Tcp配合客户端管理类.dll
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.pdb
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ServerLessonStep40_Tcp配合客户端管理类.genruntimeconfig.cache
+E:\UnityProgram\StudyNet\ServerLessonStep40\obj\Debug\net6.0\ref\ServerLessonStep40_Tcp配合客户端管理类.dll

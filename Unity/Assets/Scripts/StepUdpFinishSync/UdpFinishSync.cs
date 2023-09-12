@@ -17,22 +17,23 @@ public class UdpFinishSync : MonoBehaviour
     void Start()
     {
         Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-        var arr = Encoding.UTF8.GetBytes("hello , i'm back");
 
-        s.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080));
-        s.SendTo(arr, 0, arr.Length, SocketFlags.None, new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8088));
+        s.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), Random.Range(8000, 9000)));
+        //var arr = Encoding.UTF8.GetBytes("hello , i'm back");
+        //s.SendTo(arr, 0, arr.Length, SocketFlags.None, new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8088));
 
-        Debug.LogError("客户端发送消息完成！");
-        //PlayerDataMsg pdm = new PlayerDataMsg();
-        //pdm.msg = new PlayerData()
-        //{
-        //    age = 14,
-        //    name = "s是的",
-        //    isMan = true
-        //};
-        //var arr2 = pdm.ToByte();
+        Debug.LogError("客户端发送消息完成！" + s.LocalEndPoint);
+        //QuitGameMsg pdm = new QuitGameMsg();
+        PlayerDataMsg pdm = new PlayerDataMsg();
+        pdm.msg = new PlayerData()
+        {
+            age = 14,
+            name = "s是的",
+            isMan = true
+        };
+        var arr2 = pdm.ToByte();
 
-        //s.SendTo(arr2, 0, arr2.Length, SocketFlags.None, new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8088));
+        s.SendTo(arr2, 0, arr2.Length, SocketFlags.None, new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8088));
 
 
 
@@ -41,7 +42,16 @@ public class UdpFinishSync : MonoBehaviour
         s.ReceiveFrom(tmp, 0, tmp.Length, SocketFlags.None, ref anyIP);
 
 
-        Debug.LogError("收到消息：" + Encoding.UTF8.GetString(tmp));
+        Debug.LogError($"收到 ip {anyIP}消息：" + Encoding.UTF8.GetString(tmp));
+
+
+
+        byte[] tmp2 = new byte[512];
+        EndPoint anyIP2 = new IPEndPoint(IPAddress.Any, 0);
+        s.ReceiveFrom(tmp2, 0, tmp2.Length, SocketFlags.None, ref anyIP);
+
+
+        Debug.LogError($"收到 ip广播 {anyIP2}消息：" + Encoding.UTF8.GetString(tmp2));
     }
 
     // Update is called once per frame

@@ -1,0 +1,15 @@
+E:\UnityProgram\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP简单连接.exe
+E:\UnityProgram\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP简单连接.deps.json
+E:\UnityProgram\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP简单连接.runtimeconfig.json
+E:\UnityProgram\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP简单连接.dll
+E:\UnityProgram\StudyNet\StepRealy37UDP\bin\Debug\net6.0\StepRealy37UDP简单连接.pdb
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP简单连接.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP简单连接.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP简单连接.AssemblyInfoInputs.cache
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP简单连接.AssemblyInfo.cs
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP简单连接.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP简单连接.dll
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\refint\StepRealy37UDP简单连接.dll
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP简单连接.pdb
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\StepRealy37UDP简单连接.genruntimeconfig.cache
+E:\UnityProgram\StudyNet\StepRealy37UDP\obj\Debug\net6.0\ref\StepRealy37UDP简单连接.dll

@@ -1,0 +1,15 @@
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.exe
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.deps.json
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.runtimeconfig.json
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.dll
+E:\UnityProgram\StudyNet\TestSocketBag\bin\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.pdb
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.AssemblyInfoInputs.cache
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.AssemblyInfo.cs
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.dll
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\refint\TestSocketBag_Tcp39分包粘包问题.dll
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.pdb
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\TestSocketBag_Tcp39分包粘包问题.genruntimeconfig.cache
+E:\UnityProgram\StudyNet\TestSocketBag\obj\Debug\net6.0\ref\TestSocketBag_Tcp39分包粘包问题.dll

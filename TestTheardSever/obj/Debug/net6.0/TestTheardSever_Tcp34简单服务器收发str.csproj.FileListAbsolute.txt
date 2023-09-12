@@ -1,0 +1,15 @@
+E:\UnityProgram\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.exe
+E:\UnityProgram\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.deps.json
+E:\UnityProgram\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.runtimeconfig.json
+E:\UnityProgram\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.dll
+E:\UnityProgram\StudyNet\TestTheardSever\bin\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.pdb
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.csproj.AssemblyReference.cache
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.AssemblyInfoInputs.cache
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.AssemblyInfo.cs
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.csproj.CoreCompileInputs.cache
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.dll
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\refint\TestTheardSever_Tcp34简单服务器收发str.dll
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.pdb
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\TestTheardSever_Tcp34简单服务器收发str.genruntimeconfig.cache
+E:\UnityProgram\StudyNet\TestTheardSever\obj\Debug\net6.0\ref\TestTheardSever_Tcp34简单服务器收发str.dll
