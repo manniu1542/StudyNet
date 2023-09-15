@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UnityProgram\\StudyNet\\StepUdpFinishSync\\StepUdpFinishSync.csproj": {}
+    "F:\\StudyNet\\StepUdpFinishSync\\StepUdpFinishSync.csproj": {}
   },
   "projects": {
-    "E:\\UnityProgram\\StudyNet\\StepUdpFinishSync\\StepUdpFinishSync.csproj": {
+    "F:\\StudyNet\\StepUdpFinishSync\\StepUdpFinishSync.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UnityProgram\\StudyNet\\StepUdpFinishSync\\StepUdpFinishSync.csproj",
+        "projectUniqueName": "F:\\StudyNet\\StepUdpFinishSync\\StepUdpFinishSync.csproj",
         "projectName": "StepUdpFinishSync",
-        "projectPath": "E:\\UnityProgram\\StudyNet\\StepUdpFinishSync\\StepUdpFinishSync.csproj",
+        "projectPath": "F:\\StudyNet\\StepUdpFinishSync\\StepUdpFinishSync.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\UnityProgram\\StudyNet\\StepUdpFinishSync\\obj\\",
+        "outputPath": "F:\\StudyNet\\StepUdpFinishSync\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Software\\VS2022\\tools\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Administrator\\Downloads": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     }

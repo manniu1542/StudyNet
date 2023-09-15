@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "D:\\Software\\VS2022\\tools\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\UnityProgram\\StudyNet\\TestTheardSever\\TestTheardSever_Tcp34简单服务器收发str.csproj",
+      "projectUniqueName": "F:\\StudyNet\\TestTheardSever\\TestTheardSever_Tcp34简单服务器收发str.csproj",
       "projectName": "TestTheardSever_Tcp34简单服务器收发str",
-      "projectPath": "E:\\UnityProgram\\StudyNet\\TestTheardSever\\TestTheardSever_Tcp34简单服务器收发str.csproj",
+      "projectPath": "F:\\StudyNet\\TestTheardSever\\TestTheardSever_Tcp34简单服务器收发str.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\UnityProgram\\StudyNet\\TestTheardSever\\obj\\",
+      "outputPath": "F:\\StudyNet\\TestTheardSever\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Software\\VS2022\\tools\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\Administrator\\Downloads": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }
