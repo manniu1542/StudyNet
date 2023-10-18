@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE FV [
+<!ELEMENT FV (RC)>
+<!ELEMENT RC (#PCDATA)>
+<!ELEMENT DS (#PCDATA)>
+]>
+<FV>
+<RC>%RESULT%</RC>
+<DS>%DIRECTORY_SIZE%</DS>
+</FV>

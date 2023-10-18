@@ -1,0 +1,1 @@
+var cylb=undefined;var mng=undefined;var cbmb=new csqb.Pane("logwindow");function rqh(){cylb=zt(cjrb+"Log",lvn,ngcb);}function ngcb(){if(cylb!=undefined){var khqb=mrhb(cylb,cbmb,"log");if(khqb==1)cylb=undefined;}}function mqn(){szr("log","Init"+cjrb+"Log",lvn);}function yndb(){if(cylb==undefined)rqh();}function vwl(wkj){if(wkj)clearInterval(mng);else mng=setInterval(yndb,500);}

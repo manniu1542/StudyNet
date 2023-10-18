@@ -1,0 +1,9 @@
+<!--#include "..\..\Common\Strings\Result.strings"-->
+%PRIV_GROUP_ADMIN%
+<?xml version="1.0" encoding="UTF-8" ?>
+<license>
+<MaxUsersLicense>%CServer.%SERVER_ID%.MaxUsersLicense%</MaxUsersLicense>
+<TotalUsers>%CServer.%SERVER_ID%.TotalUsers%</TotalUsers>
+<result>%RESULT%</result>
+<ResultText>%RESULT_TEXT%</ResultText>
+</license>
