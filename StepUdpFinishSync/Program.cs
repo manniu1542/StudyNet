@@ -11,21 +11,37 @@ namespace StepUdpFinishSync
 
     internal class Program
     {
-        static ServerMgr serverMgr;
+        static ServerMgr serverMgr = ServerMgr.Instance;
         static void Main(string[] args)
         {
-            serverMgr = new ServerMgr();
-            serverMgr.Init();
-            Console.WriteLine($"启动简易udp服务端");
+
+            serverMgr.Start();
+            Console.WriteLine($"启动udp服务端");
 
 
             while (true)
             {
                 var str = Console.ReadLine();
-                if (str == "1")
+                if (str.Contains("B:") && str.Length > 2)
                 {
                     Console.WriteLine("发送广播消息！");
-                    serverMgr.Braod();
+                    PlayerDataMsg playerDataMsg = new PlayerDataMsg()
+                    {
+                        msg = new PlayerData()
+                        {
+                            age = 12,
+                            name = str.Replace("B:", ""),
+                        }
+                    };
+
+
+                    serverMgr.BraodCast(playerDataMsg);
+
+                }
+                else if (str == "close")
+                {
+                    Console.WriteLine("关闭服务器！");
+                    serverMgr.Close();
                     break;
                 }
 
