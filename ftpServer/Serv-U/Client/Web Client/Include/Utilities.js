@@ -1,0 +1,1 @@
+function bxb(){bzh(true);if(dqk==1||dqk==3)hhd=syb+"DomainConsole.htm";else if(dqk==2||dqk==4)hhd=syb+"console.htm";location.href=hhd;}

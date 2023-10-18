@@ -1,0 +1,241 @@
+>>> VERSION 2 <<<
+CServer
+Serv-U File Server
+0
+0
+2
+CRhinoStringAttr
+ArchiveVersion
+1
+1
+Val
+10.1.0.1
+<<- ArchiveVersion
+CDomain
+Domain
+0
+0
+12
+CRhinoFileNameStringAttr
+DomainName
+1
+1
+Val
+server
+<<- DomainName
+CRhinoUintAttr
+PasswordEncryptMode
+0
+1
+Val
+1
+<<- PasswordEncryptMode
+CListenSocketConf
+ListenSocketConf
+0
+0
+0
+<<- ListenSocketConf
+CListenSocketConf
+ListenSocketConf
+0
+0
+2
+CRhinoIntAttr
+Type
+1
+1
+Val
+1
+<<- Type
+CRhinoUintAttr
+Port
+1
+1
+Val
+990
+<<- Port
+<<- ListenSocketConf
+CListenSocketConf
+ListenSocketConf
+0
+0
+2
+CRhinoIntAttr
+Type
+1
+1
+Val
+2
+<<- Type
+CRhinoUintAttr
+Port
+1
+1
+Val
+22
+<<- Port
+<<- ListenSocketConf
+CListenSocketConf
+ListenSocketConf
+0
+0
+2
+CRhinoIntAttr
+Type
+1
+1
+Val
+3
+<<- Type
+CRhinoUintAttr
+Port
+1
+1
+Val
+80
+<<- Port
+<<- ListenSocketConf
+CListenSocketConf
+ListenSocketConf
+0
+0
+2
+CRhinoIntAttr
+Type
+1
+1
+Val
+4
+<<- Type
+CRhinoUintAttr
+Port
+1
+1
+Val
+443
+<<- Port
+<<- ListenSocketConf
+CListenSocketConf
+ListenSocketConf
+0
+0
+1
+CRhinoStringAttr
+IP
+1
+1
+Val
+::
+<<- IP
+<<- ListenSocketConf
+CListenSocketConf
+ListenSocketConf
+0
+0
+3
+CRhinoIntAttr
+Type
+1
+1
+Val
+1
+<<- Type
+CRhinoStringAttr
+IP
+1
+1
+Val
+::
+<<- IP
+CRhinoUintAttr
+Port
+1
+1
+Val
+990
+<<- Port
+<<- ListenSocketConf
+CListenSocketConf
+ListenSocketConf
+0
+0
+3
+CRhinoIntAttr
+Type
+1
+1
+Val
+2
+<<- Type
+CRhinoStringAttr
+IP
+1
+1
+Val
+::
+<<- IP
+CRhinoUintAttr
+Port
+1
+1
+Val
+22
+<<- Port
+<<- ListenSocketConf
+CListenSocketConf
+ListenSocketConf
+0
+0
+3
+CRhinoIntAttr
+Type
+1
+1
+Val
+3
+<<- Type
+CRhinoStringAttr
+IP
+1
+1
+Val
+::
+<<- IP
+CRhinoUintAttr
+Port
+1
+1
+Val
+80
+<<- Port
+<<- ListenSocketConf
+CListenSocketConf
+ListenSocketConf
+0
+0
+3
+CRhinoIntAttr
+Type
+1
+1
+Val
+4
+<<- Type
+CRhinoStringAttr
+IP
+1
+1
+Val
+::
+<<- IP
+CRhinoUintAttr
+Port
+1
+1
+Val
+443
+<<- Port
+<<- ListenSocketConf
+<<- Domain
+<<- Serv-U File Server
