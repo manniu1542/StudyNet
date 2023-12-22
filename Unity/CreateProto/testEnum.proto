@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+package mySutyProto; //命名空间
+
+enum EnuTestType{
+    One =0;
+    Two =1;
+    Three=2;
+}
+
+message Test{
+    int32  aa=1;
+    float tt=2;
+    double gg=3;
+    string mm = 4;
+    bool bb = 5;
+    bytes arr = 6;
+    EnuTestType typeTest =7;
+    repeated float arrTT=8;
+}

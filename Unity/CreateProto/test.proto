@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "testEnum.proto";//引入其他的 proto 文件 
+package mySutyProto; //命名空间
+
+
+message Test{
+    sint32 at=0;
+    int32  aa=1;
+    float tt=2;
+    double gg=3;
+    string mm = 4;
+    bool bb = 5;
+    bytes arr = 6;
+    mySutyProto.EnuTestType typeTest =7;
+    repeated float arrTT=8;
+   map<int32,float> tt =9;
+}
