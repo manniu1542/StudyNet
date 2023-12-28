@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>  <!-- 头文件 -->
+
+<messages>
+
+    <enum name="E_MsgType" namespace="Game">
+        <field name="PlayerData">1</field>
+        <field name="PlayerQuit" />
+    </enum>
+    <enum name="E_MsgType22" namespace="Game">
+        <field name="HHH">1</field>
+        <field name="DDD" />
+    </enum>
+    <data name="PlayerData" namespace="Game">
+        <field type="int" name="age" />
+        <field type="string" name="name" />
+        <field type="bool" name="isMan" />
+    </data>
+    <data name="PPPData" namespace="Game">
+        <field type="int" name="age" />
+        <field type="int[]" name="age2" />
+        <field type="List&lt;int&gt;" name="age3" />
+        <field type="Dictionary&lt;string,int&gt;" name="name" />
+        <field type="bool" name="isMan" />
+    </data>
+    <message id="1001" name="PlayerDataMsg" namespace="Game">
+        <field type="PlayerData" name="playerData" />
+    </message>
+    <message id="1002" name="PlayerDataMsg2" namespace="Game">
+        <field type="PPPData" name="pppData"  />
+    </message>
+</messages>

@@ -29,14 +29,25 @@ public class StudyKnowHttp : MonoBehaviour
         //TestHead();
 
 
-        HttpMgr.Instance.Post("hello world", (state) =>
+        //HttpMgr.Instance.Post("hello world", (state) =>
+        //{
+        //    Debug.Log($"上传情况 ：{state}");
+        //}).ContinueWith((a) =>
+        //{
+
+        //});
+        // Application.streamingAssetsPath + "/aa.txt" ,
+        HttpMgr.Instance.PostFile(new string[] {
+        Application.streamingAssetsPath + "/tt.png" ,
+        Application.streamingAssetsPath + "/aa.txt" ,
+        Application.streamingAssetsPath + "/eee.txt" ,
+        }, (state) =>
         {
             Debug.Log($"上传情况 ：{state}");
         }).ContinueWith((a) =>
         {
 
         });
-
     }
 
     void TestHead()
