@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace TcpFinishSyc
 {
@@ -21,6 +22,7 @@ namespace TcpFinishSyc
         //连入 的方法
         public void Connect(string ip, int port)
         {
+
             try
             {
                 if (IsConnect)

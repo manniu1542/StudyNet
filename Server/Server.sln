@@ -32,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepUdpAsync", "..\StepUdpAsync\StepUdpAsync.csproj", "{2F220925-D553-43EF-83D6-808A393E82C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,10 @@ Global
 		{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCC1FF88-22CF-4B6A-8160-2B9ED168E376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F220925-D553-43EF-83D6-808A393E82C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F220925-D553-43EF-83D6-808A393E82C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F220925-D553-43EF-83D6-808A393E82C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F220925-D553-43EF-83D6-808A393E82C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
