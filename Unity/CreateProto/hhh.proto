@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+package AAA; //命名空间
+
+enum EnuTestType{
+    One =0;
+    Two =1;
+    Three=2;
+}
