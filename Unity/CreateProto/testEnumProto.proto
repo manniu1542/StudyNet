@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 
-package mySutyProto; //命名空间
+package mySutyProto2; //命名空间
 
 enum EnuTestType{
     One =0;
@@ -9,7 +9,7 @@ enum EnuTestType{
     Three=2;
 }
 
-message Test{
+message TestMsg{
     int32  aa=1;
     float tt=2;
     double gg=3;
@@ -18,4 +18,5 @@ message Test{
     bytes arr = 6;
     EnuTestType typeTest =7;
     repeated float arrTT=8;
+    
 }

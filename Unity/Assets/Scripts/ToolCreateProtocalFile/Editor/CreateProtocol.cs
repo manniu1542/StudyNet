@@ -18,7 +18,7 @@ public class CreateProtocol
     }
 
     static GenerateCSharp scrGenerateCSharp = new GenerateCSharp();
-    [MenuItem("Tool/GenerateCSharp")]
+    [MenuItem("Tool/GenerateCSharpSelf")]
     public static void GenerateCSharp()
     {
 
