@@ -1,16 +1,22 @@
 syntax = "proto3";
 
-import "hhh.proto";
-package mySutyProto; //命名空间
 
+package mySutyProto2; //命名空间
 
-message Test{
+enum EnuTestType{
+    One =0;
+    Two =1;
+    Three=2;
+}
+
+message TestMsg{
     int32  aa=1;
     float tt=2;
     double gg=3;
     string mm = 4;
     bool bb = 5;
     bytes arr = 6;
-    AAA.EnuTestType typeTest =7;
+    EnuTestType typeTest =7;
     repeated float arrTT=8;
+    
 }

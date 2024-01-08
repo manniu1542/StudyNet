@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,72 +14,74 @@ public static class CreateProtoFile
     public static void CreateCsharp()
     {
 
-        //获取proto 文件的 目录。
+
         string fileDir = Application.dataPath.Replace("Assets", "CreateProto");
-        //获取所有proto 文件
-        string[] protoFiles = Directory.GetFiles(fileDir, "*.proto");
-        //生成C#的 脚本 文件目录
-        string csharpFileDir = Application.dataPath + "/Scripts/Protobuf";
+ 
 
-        if (protoFiles.Length > 0)
+        var arrDirCsharp = Directory.GetFiles(fileDir, "*.proto");
+        if (arrDirCsharp.Length <= 0) return;
+        string csharpFileDir = Application.dataPath + "/Scripts/Protobuf/Csharp";
+
+        string[] files = Directory.GetFiles(csharpFileDir);
+        foreach (string file in files)
         {
-            UnityEngine.Debug.LogError($"该目录{fileDir}下没有proto文件生成！");
-            return;
-        }
-        //命令行 
-        string cmd = $"{fileDir}/protoc.exe -I={fileDir} --csharp_out={csharpFileDir}";
-        foreach (var item in protoFiles)
-        {
-            cmd += $" {fileDir}/{item}.proto";
+            File.Delete(file);
         }
 
+        string cmd = $"{fileDir}/protoc.exe -I={fileDir} --csharp_out={csharpFileDir} ";
+        for (int i = 0; i < arrDirCsharp.Length; i++)
+        {
+            cmd += $" {arrDirCsharp[i]}";
+
+        }
+        cmd = cmd.Replace("\\", "/");
 
         var startInfo = new ProcessStartInfo()
         {
             FileName = "cmd.exe",
             Arguments = $"/c {cmd}", // /c 参数告诉 cmd.exe 执行完命令后关闭
-            RedirectStandardOutput = true,// 获取窗口一般输出
-            RedirectStandardError = true, // 获取窗口错误输出
-            UseShellExecute = false,// 可以 获取输出log
-            CreateNoWindow = true//没有窗口
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,//错误日志
+            UseShellExecute = false,//允许输出
+            CreateNoWindow = true
 
         };
-        bool isFinish = true;
         using (Process process = new Process { StartInfo = startInfo })
         {
 
             //执行命令
             process.Start();
 
-            // 异步处理标准输出
-            process.OutputDataReceived += (sender, e) =>
+
+
+            // 读取标准输出
+            string output = process.StandardOutput.ReadToEnd();
+            if (!string.IsNullOrEmpty(output))
             {
-                if (!string.IsNullOrEmpty(e.Data))
-                {
-                    UnityEngine.Debug.Log($"Output: {e.Data}");
-                }
-            };
-
-            // 异步处理标准错误
-            process.ErrorDataReceived += (sender, e) =>
+                UnityEngine.Debug.Log(output);
+            }
+            // 读取错误输出
+            string errorOutput = process.StandardError.ReadToEnd();
+            if (!string.IsNullOrEmpty(errorOutput))
             {
-                if (!string.IsNullOrEmpty(e.Data))
-                {
-                    isFinish = false;
-                    UnityEngine.Debug.LogError($"Error: {e.Data}");
-                }
-            };
+                UnityEngine.Debug.LogError(errorOutput);
+            }
+            else
+            {
+                UnityEngine.Debug.Log("完成C#的protobuf！");
+            }
 
-            process.BeginOutputReadLine(); // 开始异步读取标准输出
-            process.BeginErrorReadLine();  // 开始异步读取标准错误
-
+            // 等待进程退出
             process.WaitForExit();
+
+
+
+
 
 
         }
 
         AssetDatabase.Refresh();
-        if (isFinish)
-            UnityEngine.Debug.Log($"protobuf构建完成！");
+ 
     }
 }
