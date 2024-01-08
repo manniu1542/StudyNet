@@ -57,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Protobuf\Editor\CreateProtoFile.cs" />
+    <Compile Include="Assets\Scripts\UnityNet\UnityWebRequset\Editor\AAA.cs" />
+    <Compile Include="Assets\Scripts\ToolCreateProtocalFile\Editor\GenerateCSharp.cs" />
+    <Compile Include="Assets\Scripts\ToolCreateProtocalFile\Editor\CreateProtocol.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

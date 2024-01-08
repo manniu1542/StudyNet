@@ -1,0 +1,340 @@
+>>> VERSION 2 <<<
+CUser
+User
+0
+0
+20
+CFileTransferStats
+FileTransferStats
+1
+0
+2
+CRhinoUlongLongAttr
+BytesDownloaded
+1
+1
+Val
+2494
+<<- BytesDownloaded
+CRhinoUlongLongAttr
+FilesDownloaded
+1
+1
+Val
+2
+<<- FilesDownloaded
+<<- FileTransferStats
+CRhinoDateTimeAttr
+LastLoginTime
+1
+1
+Val
+1697674889
+<<- LastLoginTime
+CRhinoDateTimeAttr
+LastLogoutTime
+1
+1
+Val
+1697675050
+<<- LastLogoutTime
+CRhinoUlongLongAttr
+Logins
+1
+1
+Val
+1
+<<- Logins
+CRhinoUlongLongAttr
+Logouts
+1
+1
+Val
+1
+<<- Logouts
+CRhinoUlongLongAttr
+MostConcurrentLogins
+1
+1
+Val
+1
+<<- MostConcurrentLogins
+CRhinoUlongLongAttr
+TotalLoginDurationSecs
+1
+1
+Val
+161
+<<- TotalLoginDurationSecs
+CRhinoUlongLongAttr
+LongestLoginDurationSecs
+1
+1
+Val
+161
+<<- LongestLoginDurationSecs
+CRhinoUlongLongAttr
+ShortestLoginDurationSecs
+1
+1
+Val
+161
+<<- ShortestLoginDurationSecs
+CRhinoFileNameStringAttr
+LoginID
+1
+1
+Val
+Anonymous
+<<- LoginID
+CRhinoDateTimeAttr
+PasswordChangedOn
+1
+1
+Val
+1697674675
+<<- PasswordChangedOn
+CRhinoUlongLongAttr
+RtServerStartTime
+1
+1
+Val
+1697674420
+<<- RtServerStartTime
+CRhinoDoubleAttr
+RtFilesDownloadRateTotal
+1
+1
+Val
+2.435547
+<<- RtFilesDownloadRateTotal
+CDailyCount
+RtDailyCount
+1
+0
+25
+CRhinoUlongLongAttr
+TotalCount
+1
+1
+Val
+1
+<<- TotalCount
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+1
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+<<- RtDailyCount
+CRhinoUlongLongAttr
+RtPreviousCount
+1
+1
+Val
+1
+<<- RtPreviousCount
+CRhinoUlongLongAttr
+RtPreviousSeconds
+1
+1
+Val
+161
+<<- RtPreviousSeconds
+CRhinoUlongAttr
+RtPreviousMaxSeconds
+1
+1
+Val
+161
+<<- RtPreviousMaxSeconds
+CRhinoUintAttr
+RtPreviousMaxConcurrent
+1
+1
+Val
+1
+<<- RtPreviousMaxConcurrent
+CDirPathAttr
+HomeDir
+0
+1
+Val
+E:\\UnityProgram\\StudyNet\\ftpServer\\ShareFile
+<<- HomeDir
+CDirAccess
+DirAccess
+0
+0
+1
+CDirFileAccessPathAttr
+Dir
+1
+1
+Val
+%HOME%
+<<- Dir
+<<- DirAccess
+<<- User

@@ -1,0 +1,222 @@
+>>> VERSION 2 <<<
+CUser
+User
+0
+0
+6
+CRhinoFileNameStringAttr
+LoginID
+1
+1
+Val
+Anonymous
+<<- LoginID
+CRhinoDateTimeAttr
+PasswordChangedOn
+1
+1
+Val
+1697674675
+<<- PasswordChangedOn
+CRhinoUlongLongAttr
+RtServerStartTime
+1
+1
+Val
+1697674420
+<<- RtServerStartTime
+CDailyCount
+RtDailyCount
+1
+0
+24
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+CRhinoUlongLongAttr
+HourTotal
+0
+1
+Val
+0
+<<- HourTotal
+<<- RtDailyCount
+CDirPathAttr
+HomeDir
+0
+1
+Val
+E:\\UnityProgram\\StudyNet\\ftpServer\\ShareFile
+<<- HomeDir
+CDirAccess
+DirAccess
+0
+0
+1
+CDirFileAccessPathAttr
+Dir
+1
+1
+Val
+%HOME%
+<<- Dir
+<<- DirAccess
+<<- User
